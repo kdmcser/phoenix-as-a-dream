@@ -74,8 +74,7 @@
 			{
 				"type" : "SPELL_DAMAGE_REDUCTION",
 				"subtype" : "spellSchool.any",
-				"updater" : "TIMES_STACK_LEVEL",
-				"val" : 17
+				"val" : 10
 			},	
 			"reduceSpellDamageMax" :
 			{

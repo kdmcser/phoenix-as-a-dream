@@ -4,7 +4,7 @@
 	"author": "kdmcser",
 	"version" : "1.0.0",
 	"contact": "",
-	"modType" : "Heroes",
+	"modType" : "Compatibility",
 	"depends" : ["wake-of-gods"],
 	"compatibility" :
 	{
