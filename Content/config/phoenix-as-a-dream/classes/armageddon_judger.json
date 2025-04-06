@@ -55,7 +55,7 @@
 			"navigation"   : 2,
 			"leadership"   : 3,
 			"wisdom"       : 7,
-			"mysticism"    : 10,
+			"mysticism"    : 0,
 			"luck"         : 3,
 			"ballistics"   : 1,
 			"eagleEye"     : 1,
@@ -75,7 +75,8 @@
 			"sorcery"      : 6,
 			"resistance"   : 1,
 			"firstAid"     : 1,
-			"paadFourSchools" : 30
+			"paadFourSchools" : 30,
+            "paadMarching" : 10
 		},
 		"defaultTavern" : 0,
 		"tavern" :

@@ -2,18 +2,19 @@
 	"name" : "Phoenix as a dream",
 	"description" : "Add a series of new heroes.",
 	"author": "kdmcser, Maestro & xiasimanniu",
-	"version" : "1.1.1",
+	"version" : "1.2.0",
 	"contact": "",
 	"modType" : "Heroes",
 	"compatibility" :
 	{
-		"min" : "1.6.0"
+		"min" : "1.7.0"
 	},	
 	"changelog" :
 	{
 		"1.0.0"   : [ "Initial release" ],
 		"1.1.0"   : [ "Add new heroes: Like Zheng and Henry Tao (use Maestro's def to Sleeping Dragon)" ],
-		"1.1.1"   : [ "Hero balance, adding new bank Sacred Trial Ground (def is designed by xiasimanniu)." ]
+		"1.1.1"   : [ "Hero balance, adding new bank Sacred Trial Ground (def is designed by xiasimanniu)." ],
+        "1.2.0"   : [" Improvements made to the hero Like Zheng: replacing start skills, breaking the enemy's spell immunity. " ]
 	},
 
 	"chinese" : {
@@ -66,7 +67,8 @@
 	[
 		"config/phoenix-as-a-dream/skills/phoenixs_bless.json",
 		"config/phoenix-as-a-dream/skills/fire_resist.json",
-		"config/phoenix-as-a-dream/skills/four_schools.json"
+		"config/phoenix-as-a-dream/skills/four_schools.json",
+		"config/phoenix-as-a-dream/skills/marching.json"
 	],
 	
 	"spells" :
