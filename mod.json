@@ -1,8 +1,8 @@
 {
 	"name" : "Phoenix as a dream",
 	"description" : "Add a series of new heroes.",
-	"author": "kdmcser, Maestro & xiasimanniu",
-	"version" : "1.2.0",
+	"author": "kdmcser, Maestro, xiasimanniu, Zbigniew, Fiorin, Lucki, Zhang & Ben Yan",
+	"version" : "1.3.1",
 	"contact": "",
 	"modType" : "Heroes",
 	"compatibility" :
@@ -14,7 +14,9 @@
 		"1.0.0"   : [ "Initial release" ],
 		"1.1.0"   : [ "Add new heroes: Like Zheng and Henry Tao (use Maestro's def to Sleeping Dragon)" ],
 		"1.1.1"   : [ "Hero balance, adding new bank Sacred Trial Ground (def is designed by xiasimanniu)." ],
-        "1.2.0"   : [" Improvements made to the hero Like Zheng: replacing start skills, breaking the enemy's spell immunity. " ]
+        "1.2.0"   : [" Improvements made to the hero Like Zheng: replacing start skills, breaking the enemy's spell immunity. " ],
+		"1.3.0"   : ["Add new heroes: Summer Wind (use Fiorin's dodge spell assets). " ],
+        "1.3.1"   : ["Add new heroes: Ash&Amber (use hero HD assetn made by Lucki, commander asset made by Zhang, and war machine assets from Ben Yan's fariy mod, Flame Storm assets is from Ben Yan's tartarus mod, modify colors. Other spell assets is from Baiyunpiaopiao's def packages). " ] 
 	},
 
 	"chinese" : {
@@ -31,29 +33,49 @@
 		"config/phoenix-as-a-dream/artifacts/phoenix_spell_book.json",
 		"config/phoenix-as-a-dream/artifacts/phoenix_badge.json",
 		"config/phoenix-as-a-dream/artifacts/vcmi_enhancement_shield.json",
-		"config/phoenix-as-a-dream/artifacts/reprogramming_chip.json"
+		"config/phoenix-as-a-dream/artifacts/reprogramming_chip.json",
+        "config/phoenix-as-a-dream/artifacts/destroyer_art.json",
+        "config/phoenix-as-a-dream/artifacts/snipper_art.json",
+        "config/phoenix-as-a-dream/artifacts/hindrance_crystal.json",
+        "config/phoenix-as-a-dream/artifacts/arcanomechanical_amulet.json",
+        "config/phoenix-as-a-dream/artifacts/ring_of_armor_break.json"
 	],
+    
+    "bonuses": [
+        "config/phoenix-as-a-dream/bonuses/arcanomechanics.json",
+        "config/phoenix-as-a-dream/bonuses/hindrance.json",
+        "config/phoenix-as-a-dream/bonuses/enchantment.json",
+        "config/phoenix-as-a-dream/bonuses/armor_break.json"
+    ],
 	
 	"creatures" :
 	[
 		"config/phoenix-as-a-dream/creatures/hot_flame_element.json",
 		"config/phoenix-as-a-dream/creatures/golden_sun_element.json",
 		"config/phoenix-as-a-dream/creatures/sleeping_dragon_commander.json",
-		"config/phoenix-as-a-dream/creatures/young_phoenix_commander.json"
+		"config/phoenix-as-a-dream/creatures/young_phoenix_commander.json",
+        "config/phoenix-as-a-dream/creatures/wind_dancer_commander.json",
+        "config/phoenix-as-a-dream/creatures/amber_commander.json",
+		"config/phoenix-as-a-dream/creatures/destroyer.json",
+        "config/phoenix-as-a-dream/creatures/snipper.json"
 	],
 	
 	"heroClasses" :
 	[
 		"config/phoenix-as-a-dream/classes/phoenix_class.json",
 		"config/phoenix-as-a-dream/classes/armageddon_judger.json",
-		"config/phoenix-as-a-dream/classes/fire_dominator_class.json"
+		"config/phoenix-as-a-dream/classes/fire_dominator_class.json",
+        "config/phoenix-as-a-dream/classes/wind_herald_class.json",
+        "config/phoenix-as-a-dream/classes/arcanomechanist.json"
 	],
     
 	"heroes" :
 	[
 		"config/phoenix-as-a-dream/heroes/phoenix_as_a_dream.json",
 		"config/phoenix-as-a-dream/heroes/sleeping_dragon.json",
-		"config/phoenix-as-a-dream/heroes/young_phoenix.json"
+		"config/phoenix-as-a-dream/heroes/summer_wind.json",
+		"config/phoenix-as-a-dream/heroes/young_phoenix.json",
+		"config/phoenix-as-a-dream/heroes/ash_amber.json"
 	],
 	
 	"settings" : 
@@ -68,7 +90,19 @@
 		"config/phoenix-as-a-dream/skills/phoenixs_bless.json",
 		"config/phoenix-as-a-dream/skills/fire_resist.json",
 		"config/phoenix-as-a-dream/skills/four_schools.json",
-		"config/phoenix-as-a-dream/skills/marching.json"
+		"config/phoenix-as-a-dream/skills/marching.json",
+        "config/phoenix-as-a-dream/skills/wind_archery.json",
+		"config/phoenix-as-a-dream/skills/wind_bless.json",
+		"config/phoenix-as-a-dream/skills/wind_arcana.json",
+		"config/phoenix-as-a-dream/skills/wind_supply.json",
+		"config/phoenix-as-a-dream/skills/wind_shroud.json",
+		"config/phoenix-as-a-dream/skills/wind_evasion.json",
+		"config/phoenix-as-a-dream/skills/wind_swiftness.json",
+		"config/phoenix-as-a-dream/skills/wind_sniping.json",
+		"config/phoenix-as-a-dream/skills/arcanomechanics.json",
+		"config/phoenix-as-a-dream/skills/enchantment.json",
+        "config/phoenix-as-a-dream/skills/hindrance.json",
+        "config/phoenix-as-a-dream/skills/armor_break.json"
 	],
 	
 	"spells" :
@@ -76,6 +110,26 @@
 		"config/phoenix-as-a-dream/spells/summon_phoenix.json",
 		"config/phoenix-as-a-dream/spells/lesser_summon_phoenix.json",
 		"config/phoenix-as-a-dream/spells/always_first.json",
-		"config/phoenix-as-a-dream/spells/fire_vulnerable.json"
-	]
+		"config/phoenix-as-a-dream/spells/fire_vulnerable.json",
+		"config/phoenix-as-a-dream/spells/wind_stealth.json",
+		"config/phoenix-as-a-dream/spells/wind_dodge.json",
+		"config/phoenix-as-a-dream/spells/accurate_shot.json",
+		"config/phoenix-as-a-dream/spells/magic_laser.json",
+		"config/phoenix-as-a-dream/spells/sacrifice_destroyer.json",
+		"config/phoenix-as-a-dream/spells/sacrifice_snipper.json",
+		"config/phoenix-as-a-dream/spells/inspire_arcanomechanics.json",
+		"config/phoenix-as-a-dream/spells/air_implosion.json",
+		"config/phoenix-as-a-dream/spells/flame_storm.json",
+		"config/phoenix-as-a-dream/spells/weak_fire_mark.json",
+		"config/phoenix-as-a-dream/spells/weak_air_mark.json",
+		"config/phoenix-as-a-dream/spells/weak_spell_mark.json",
+		"config/phoenix-as-a-dream/spells/arcane_hindrance.json",
+		"config/phoenix-as-a-dream/spells/chain_lightning_ex.json",
+		"config/phoenix-as-a-dream/spells/armageddon_ex.json",
+		"config/phoenix-as-a-dream/spells/weak_ray.json"
+	],
+    "spellSchools":
+    [
+        "config/phoenix-as-a-dream/schools/arcane.json"
+    ]
 }

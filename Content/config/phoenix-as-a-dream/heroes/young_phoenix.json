@@ -76,10 +76,8 @@
 					[
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters" : [
-								"paadYoungPhoenixCommander", 
-								false
-							]
+							"creature" : "paadYoungPhoenixCommander", 
+							"includeUpgrades" : false
 						}
 					]
 				},
@@ -93,10 +91,8 @@
 					[
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters" : [
-								"paadYoungPhoenixCommander", 
-								false
-							]
+							"creature" : "paadYoungPhoenixCommander", 
+							"includeUpgrades" : false
 						}
 					]
 				},
@@ -110,10 +106,8 @@
 					[
 						{
 							"type" : "CREATURE_TYPE_LIMITER",
-							"parameters" : [
-								"paadYoungPhoenixCommander", 
-								false
-							]
+							"creature" : "paadYoungPhoenixCommander", 
+							"includeUpgrades" :false
 						}
 					]
 				}

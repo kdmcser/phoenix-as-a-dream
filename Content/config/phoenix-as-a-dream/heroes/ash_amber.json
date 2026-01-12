@@ -1,0 +1,101 @@
+{
+	"paadAshAmber" :
+	{
+		"class": "paadArcanomechanist",
+		"female" : true,
+		
+		"texts" :
+		{
+			"name" : "Ash",
+			"biography" : "Ash and Amber have been inseparable since childhood, twin sisters bound as though they shared a single soul. Ash, having been born only a few seconds earlier, ould proudly claim the role of the elder sister. Not only do the two look alike, but their personalities, thoughts, and ways of dealing with the world are nearly indistinguishable. Some even suspect that they might, in truth, be one and the same—one the original, the other a manifested duplicate. Thus, they came to be known simply as \"Ash & Amber\".\n\nThey are not natives of Nighon, nor even of the continent of Enroth; no one knows where the two of them truly came from. To most, their only lasting impression is that indestructible arcanomechanical construct, as if it could annihilate every living thing save Ash and Amber themselves. This power does not arise from Nighon, nor from Eeofol, yet it grows stronger when fed with the sacrifice of vile, shadow-steeped creatures. Realizing this, Ash and Amber gladly joined the armies of Nighon, casually seizing a few ugly Beholders and foul-smelling Harpies from time to time to fuel their machine. The high command of Nighon turns a blind eye to such practices; after all, overwhelming power can spare the lives of many soldiers, and it is better that these monsters’ flesh and blood be used to empower the weapons hurled at the enemy than wasted on the battlefield. Thus, this grim bargain was struck to the satisfaction of all involved.",
+			"specialty" :
+			{
+				"description" : "Primary skills are balanced. On level-up, one primary skill increases by 1, with equal chance for each. Every 4 levels, all primary skills increase by 1.",
+				"tooltip" : "Special Bonus: Balanced Property",
+				"name" : "Balanced Property"
+			}
+		},
+
+		"images" :
+		{
+			"specialtySmall" : "phoenixasadream/heroes/ashamber/spec-small.png",
+			"specialtyLarge" : "phoenixasadream/heroes/ashamber/spec-large.png",
+			"large" : "phoenixasadream/heroes/ashamber/portrait-large.png",
+			"small" : "phoenixasadream/heroes/ashamber/portrait-small.png"
+		},
+		"army" :
+		[
+			{
+				"creature" : "paadAmberCommander",
+				"max" : 1,
+				"min" : 1
+			},
+			{
+				"creature" : "paadSnipper",
+				"max" : 1,
+				"min" : 1
+			},
+			{
+				"creature" : "beholder",
+				"max" : 4,
+				"min" : 3
+			}	
+		],
+		"skills" :
+		[
+			{
+				"level" : "basic",
+				"skill" : "paadArcanomechanics"
+			},
+			{
+				"level" : "basic",
+				"skill" : "logistics"
+			}
+		],
+		"spellbook" :
+		[
+			"slow"
+		],
+		"specialty" : {
+			"bonuses" : {
+				"balancePrimaryAttack": {
+					"type" : "PRIMARY_SKILL",
+                    "subtype" : "attack",
+					"val" : 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 4
+                    }
+				},
+                "balancePrimaryDefence": {
+					"type" : "PRIMARY_SKILL",
+                    "subtype" : "defence",
+					"val" : 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 4
+                    }
+				},
+                "balancePrimarySpellpower": {
+					"type" : "PRIMARY_SKILL",
+                    "subtype" : "spellpower",
+					"val" : 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 4
+                    }
+				},
+                "balancePrimaryKnowledge": {
+					"type" : "PRIMARY_SKILL",
+                    "subtype" : "knowledge",
+					"val" : 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 4
+                    }
+				}
+			}
+		}
+	}
+}
+

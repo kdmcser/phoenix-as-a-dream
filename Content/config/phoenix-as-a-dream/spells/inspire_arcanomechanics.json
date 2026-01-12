@@ -1,0 +1,105 @@
+{
+	"paadInspireArcanomechanics" : {
+		"type" : "combat",
+		"name" : "Inspire Arcanomechanics",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"targetType" : "CREATURE",
+		"level" : 5,
+		"power" : 10,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"animation" : {
+			"affect" :["phoenix-as-a-dream/spells/inspireArcanomechanics/inspireArcanomechanics.def"]
+		},
+		"flags" : {
+			"positive" : true,
+			"special" : true
+		},
+		"sounds" : {
+			"cast" : "MIRTH"
+		},
+		"graphics" : {
+			"iconBook" : "phoenix-as-a-dream/spells/inspireArcanomechanics/inspireArcanomechanicsBook.png",
+			"iconScroll" : "phoenix-as-a-dream/spells/inspireArcanomechanics/inspireArcanomechanicsScroll.png",
+			"iconScenarioBonus" : "phoenix-as-a-dream/spells/inspireArcanomechanics/inspireArcanomechanicsScenarioBonus.png",
+			"iconEffect" : "phoenix-as-a-dream/spells/inspireArcanomechanics/inspireArcanomechanicsEffect.png"
+		},
+        "targetCondition" : {
+            "anyOf": {
+                "bonus.ARCANOMECHANICS":"absolute"
+            }
+        },		
+		"levels" : {
+			"base" : {
+				"range" : "0",
+				"power" : 10,
+				"cost" : 0,
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"inspireArcanomechanicsEffect" : {
+						"type" : "core:timed",
+						"cumulative" : false,
+						"ignoreImmunity" : false,
+						"bonus" : {
+							"additionalAttack" : {
+								"val" : 1,
+								"type" : "ADDITIONAL_ATTACK",
+								"duration" : ["N_TURNS"],
+                                "turns" : 1
+							}
+						}
+					}						
+				}
+			},
+			"none" :
+			{
+				"description" : "{Inspire Arcanomechanics}\r\n\r\nInspire Arcanomechanics grants arcanomechanics one additional attack this turn."
+			},
+			"basic" :
+			{
+				"description" : "{Basic Inspire Arcanomechanics}\r\n\r\nBasic Inspire Arcanomechanics grants arcanomechanics one additional attack this turn."
+			},
+			"advanced" :
+			{
+				"battleEffects" : {
+					"inspireArcanomechanicsEffect" : {
+						"bonus" : {
+							"damageRanged" : {
+								"val" : 25,
+								"type" : "PERCENTAGE_DAMAGE_BOOST",
+                                "subtype" : "damageTypeRanged",
+								"duration" : ["N_TURNS"],
+                                "turns" : 1
+							}
+						}
+					}
+				},
+				"description" : "{Advanced Inspire Arcanomechanics}\r\n\r\nAdvanced Inspire Arcanomechanics grants arcanomechanics one additional attack this turn, and deal 25% increased damage."
+			},
+			"expert" :
+			{
+				"battleEffects" : {
+					"inspireArcanomechanicsEffect" : {
+						"bonus" : {
+							"damageRanged" : {
+								"val" : 50,
+								"type" : "PERCENTAGE_DAMAGE_BOOST",
+                                "subtype" : "damageTypeRanged",
+								"duration" : ["N_TURNS"],
+                                "turns" : 1
+							}
+						}
+					}
+				},
+				"description" : "{Expert Inspire Arcanomechanics}\r\n\r\nExpert Inspire Arcanomechanics grants arcanomechanics one additional attack this turn, and deal 50% increased damage."
+			}
+		}
+	}
+}

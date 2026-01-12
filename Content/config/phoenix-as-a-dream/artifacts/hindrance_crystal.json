@@ -1,0 +1,153 @@
+{
+	"paadHindranceCrystal":
+     {
+		"type" : [ "HERO" ],
+		"slot" : "MISC",
+		"class" : "MAJOR",
+		"value" : 10000,
+		"bonuses" : 
+		{
+            "reduceSpeed" : {
+                "val" : -1,
+                "type" : "STACKS_SPEED",
+                "valueType" : "ADDITIVE_VALUE",
+                "propagator": "BATTLE_WIDE",
+                "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                "limiters" : [ "OPPOSITE_SIDE" ]
+            },
+            "activeMark" : {
+                "type" : "HINDRANCE_CRYSTAL_ACTIVE"
+            },
+            "castArcaneHindrance":
+            {
+                "type": "SPELL",
+                "subtype": "paadArcaneHindrance",
+                "val": 0,
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_BASIC_MARK"
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_ADVANCED_MARK"
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_EXPERT_MARK"
+                    }
+                ]
+            },
+            "amberAttackEnchantment":
+            {
+                "type": "SPELL_AFTER_ATTACK",
+                "subtype": "paadArcaneHindrance",
+                "val": 100,
+                "addInfo": [0, 0],
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_BASIC_MARK"
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_ADVANCED_MARK"
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_EXPERT_MARK"
+                    }
+                ]
+            },
+            "castArcaneHindranceBasic":
+            {
+                "type": "SPELL",
+                "subtype": "paadArcaneHindrance",
+                "val": 1,
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_BASIC_MARK"
+                    }
+                ]
+            },
+            "amberAttackEnchantmentBasic":
+            {
+                "type": "SPELL_AFTER_ATTACK",
+                "subtype": "paadArcaneHindrance",
+                "val": 100,
+                "addInfo": [1, 0],
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_BASIC_MARK"
+                    }
+                ]
+            },
+            "castArcaneHindranceAdv":
+            {
+                "type": "SPELL",
+                "subtype": "paadArcaneHindrance",
+                "val": 2,
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_ADVANCED_MARK"
+                    }
+                ]
+            },
+            "amberAttackEnchantmentAdv":
+            {
+                "type": "SPELL_AFTER_ATTACK",
+                "subtype": "paadArcaneHindrance",
+                "val": 100,
+                "addInfo": [2, 0],
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_ADVANCED_MARK"
+                    }
+                ]
+            },
+            "castArcaneHindranceExp":
+            {
+                "type": "SPELL",
+                "subtype": "paadArcaneHindrance",
+                "val": 3,
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_EXPERT_MARK"
+                    }
+                ]
+            },
+            "amberAttackEnchantmentExp":
+            {
+                "type": "SPELL_AFTER_ATTACK",
+                "subtype": "paadArcaneHindrance",
+                "val": 100,
+                "addInfo": [3, 0],
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "HINDRANCE_EXPERT_MARK"
+                    }
+                ]
+            } 
+		},
+		"graphics" : {
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/hindranceCrystalLarge",
+			"image" : "phoenix-as-a-dream/artifacts/hindranceCrystalMedium",
+			"map" : "phoenix-as-a-dream/map/artifacts/hindranceCrystal.def"
+		},
+		"text" : {
+			"name" : "Hindrance Crystal",
+			"description" : "{Hindrance Crystal}\r\n\r\nReduces enemy speed by 1. If you have not learned Hindrance, you learn Arcane Hindrance spell. If you have already learned it, the casting level of Arcane Hindrance is enhanced.\nArcane Hindrance: Permanently reduces the speed of enemy creatures by 1 during battle. The affected area depends on the level of Hindrance:\nNone – affects a single enemy creature\nBasic – affects enemy creatures in the target hex and all adjacent hexes\nAdvanced – affects enemy creatures in the target hex and all hexes within 2 hexes of it\nExpert – affects all enemy creatures\n{Twinborn} – This effect also applies when Amber casts Arcane Hindrance after attacking.",
+			"event" : "You arrive before a crystal mine, only to feel your legs grow unbearably heavy, as if they were filled with lead. You cast a detection spell across the area, but find no trace of enemies. Instead, a blue crystal catches your attention. You sense that the force hindering your movement is radiating from it. Carefully, you approach and pick it up—only to be accidentally cut by one of its sharp facets. As your blood drips onto the crystal, it flares with a bright light. The hindering effect vanishes instantly, and you realize you can now command this power at will. You place the crystal into your pack and store it away."
+		}
+	}
+}
+
+

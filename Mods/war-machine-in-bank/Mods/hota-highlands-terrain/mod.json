@@ -1,0 +1,34 @@
+{
+	"name" : "War Machine In Bank - HotA Highlands Terrain",
+	"description" : "Set the war machine position for the banks in HotA highlands terrain.",
+	"author": "kdmcser",
+	"version" : "1.0.0",
+	"contact": "",
+	"modType" : "Compatibility",
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},	
+	"changelog" :
+	{
+		"1.0.0"   : [ "Initial release" ]
+	},
+    "depends" : ["hota.highlandsterrain"],
+	"settings" : 
+	{
+        "combat":
+		{
+            "layouts" : 
+            {
+                "creatureBankRuins" : 
+                {
+                    "attackerWarMachines" : [ 59, 91, 127, null ]
+                }
+            }
+        }
+    },
+	"chinese" : {
+		"name" : "战争机器进宝屋 - 深渊号角高地宝屋",
+		"description" : "设置深渊号角高地中宝屋的战争机器位置"
+	}
+}

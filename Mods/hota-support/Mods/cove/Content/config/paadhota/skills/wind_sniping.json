@@ -1,0 +1,40 @@
+{
+	"phoenix-as-a-dream:paadWindSniping" : {
+		"basic" : {
+			"effects" : {
+				"accurateShotFullRange" : {
+					"addInfo" : "hota.cove:accurateShot"
+				},
+				"accurateShotHalfRange" : {
+					"addInfo" : "hota.cove:accurateShot"
+				}  
+			}
+		},
+		"advanced" : {
+			"effects" : {
+				"accurateShotFullRange" : {
+					"addInfo" : "hota.cove:accurateShot"
+				},
+				"accurateShotHalfRange" : {
+					"addInfo" : "hota.cove:accurateShot"
+				}  
+			}
+		},
+		"expert" : {
+			"effects" : {
+				"accurateShotFullRange" : {
+					"addInfo" : "hota.cove:accurateShot"
+				},
+				"accurateShotHalfRange" : {
+					"addInfo" : "hota.cove:accurateShot"
+				}  ,
+				"accurateShotFullRangeExtra" : {
+					"addInfo" : "hota.cove:accurateShot"
+				},	
+				"accurateShotHalfRangeExtra" : {
+					"addInfo" : "hota.cove:accurateShot"
+				}
+			}
+		}
+	}
+}

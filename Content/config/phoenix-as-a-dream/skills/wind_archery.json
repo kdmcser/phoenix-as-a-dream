@@ -1,0 +1,122 @@
+{
+	"paadWindArchery" : {
+		"name" : "Wind Archery",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windArchery/windArcheryBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windArchery/windArcheryBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windArchery/windArcheryBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windArchery/windArcheryBasicLarge"
+			},
+			"description" : "{Basic Wind Archery}\n\nBasic Wind Archery increases the damage done by range attacking creatures by 10%.",
+			"effects" : {
+				"archery" : {
+					"type" : "PERCENTAGE_DAMAGE_BOOST",
+					"subtype" : "damageTypeRanged",
+                    "val" : 10,
+					"valueType" : "BASE_NUMBER"
+				}                  
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windArchery/windArcheryAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windArchery/windArcheryAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windArchery/windArcheryAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windArchery/windArcheryAdvLarge"
+			},
+			"description" : "{Advanced Wind Archery}\n\nAdvanced Wind Archery increases the damage done by range attacking creatures by 25%.",
+			"effects" : {
+				"archery" : {
+					"type" : "PERCENTAGE_DAMAGE_BOOST",
+					"subtype" : "damageTypeRanged",
+                    "val" : 25,
+					"valueType" : "BASE_NUMBER"
+				}      
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windArchery/windArcheryExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windArchery/windArcheryExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windArchery/windArcheryExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windArchery/windArcheryExpLarge"
+			},
+			"description" : "{Expert Wind Archery}\n\nExpert Wind Archery increases the damage done by range attacking creatures by 50%. If hero learn 8 wind skills at expert level, they gain an additional ranged attack.",
+			"effects" : {
+				"archery" : {
+					"type" : "PERCENTAGE_DAMAGE_BOOST",
+					"subtype" : "damageTypeRanged",
+                    "val" : 50,
+					"valueType" : "BASE_NUMBER"
+				},
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},	
+				"rangeAdditionalAttack" : {
+					"type": "ADDITIONAL_ATTACK",
+					"val" : 1,
+					"description" : "PLACEHOLDER",
+					"effectRange": "ONLY_DISTANCE_FIGHT",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}     
+			}
+		}
+	}
+}

@@ -1,0 +1,206 @@
+{
+	"paadHindrance" : {
+		"name" : "Hindrance",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/hindrance/hindranceBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/hindrance/hindranceBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/hindrance/hindranceBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/hindrance/hindranceBasicLarge"
+			},
+			"description" : "{Basic Hindrance}\n\nBasic Hindrance reduces the speed of all enemy creatures by 5%. Enemy speed cannot be reduced below 3. The hero may cast Arcane Hindrance without any costs, reducing the target enemy creature's speed by 1 permanently during battle.\n{Twinborn} - After attacking, Amber casts Arcane Hindrance on her attack target, reducing its speed by 1 permanently during battle.",
+			"effects" : {
+                "reduceSpeed" : {
+                    "val" : -5,
+                    "type" : "STACKS_SPEED",
+                    "valueType" : "PERCENT_TO_BASE",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+				},
+                "enemyMinSpeed" : {
+                    "val" : 3,
+                    "type" : "STACKS_SPEED",
+                    "valueType" : "INDEPENDENT_MAX",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+				},
+                "castArcaneHindrance":
+                {
+                    "type": "SPELL",
+                    "subtype": "paadArcaneHindrance",
+                    "val": 0,
+                    "limiters" : [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "HINDRANCE_CRYSTAL_ACTIVE"
+                        }
+                    ]
+                },
+                "amberAfterAttack":
+                {
+                    "type": "SPELL_AFTER_ATTACK",
+                    "subtype": "paadArcaneHindrance",
+                    "val": 100,
+                    "addInfo": [0, 0],
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "HINDRANCE_CRYSTAL_ACTIVE"
+                            }
+                        ]
+                    ]
+                },
+                "basicMark" : {
+                    "type" : "HINDRANCE_BASIC_MARK"
+				}
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/hindrance/hindranceAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/hindrance/hindranceAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/hindrance/hindranceAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/hindrance/hindranceAdvLarge"
+			},
+			"description" : "{Advanced Hindrance}\n\nAdvanced Hindrance reduces the speed of all enemy creatures by 10%. Enemy speed cannot be reduced below 2. The hero may cast Arcane Hindrance without any costs, it affects the target hex and all adjacent hexes, reducing the target enemy creature's speed by 1 permanently during battle.\n{Twinborn} - After attacking, Amber casts Arcane Hindrance on her attack target, it affects the target hex and all adjacent hexes, reducing its speed by 1 permanently during battle.",
+			"effects" : {
+                "reduceSpeed" : {
+                    "val" : -10,
+                    "type" : "STACKS_SPEED",
+                    "valueType" : "PERCENT_TO_BASE",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+				},
+                "enemyMinSpeed" : {
+                    "val" : 2,
+                    "type" : "STACKS_SPEED",
+                    "valueType" : "INDEPENDENT_MAX",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+				},
+                "castArcaneHindrance":
+                {
+                    "type": "SPELL",
+                    "subtype": "paadArcaneHindrance",
+                    "val": 1,
+                    "limiters" : [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "HINDRANCE_CRYSTAL_ACTIVE"
+                        }
+                    ]
+                },
+                "amberAfterAttack":
+                {
+                    "type": "SPELL_AFTER_ATTACK",
+                    "subtype": "paadArcaneHindrance",
+                    "val": 100,
+                    "addInfo": [1, 0],
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "HINDRANCE_CRYSTAL_ACTIVE"
+                            }
+                        ]
+                    ]
+                },
+                "advancedMark" : {
+                    "type" : "HINDRANCE_ADVANCED_MARK"
+				}
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/hindrance/hindranceExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/hindrance/hindranceExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/hindrance/hindranceExpBonus",
+				"large" : "phoenix-as-a-dream/skills/hindrance/hindranceExpLarge"
+			},
+			"description" : "{Expert Hindrance}\n\nExpert Hindrance reduces the speed of all enemy creatures by 20%. Enemy speed cannot be reduced below 1. The hero may cast Arcane Hindrance without any costs, it affects the target hex and all hexes within 2 hexes of it, reduces the affected enemy creature's speed by 1 permanently during battle.\n{Twinborn} - After attacking, Amber casts Arcane Hindrance on her attack target, it affects the target hex nd all hexes within 2 hexes of it, reduces the affected enemy creature's speed by 1 permanently during battle.",
+			"effects" : {
+                "reduceSpeed" : {
+                    "val" : -20,
+                    "type" : "STACKS_SPEED",
+                    "valueType" : "PERCENT_TO_BASE",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+				},
+				"enemyMinSpeed" : {
+                    "val" : 1,
+                    "type" : "STACKS_SPEED",
+                    "valueType" : "INDEPENDENT_MAX",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+				},
+                "castArcaneHindrance":
+                {
+                    "type": "SPELL",
+                    "subtype": "paadArcaneHindrance",
+                    "val": 2,
+                    "limiters" : [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "HINDRANCE_CRYSTAL_ACTIVE"
+                        }
+                    ]
+                },
+                "amberAfterAttack":
+                {
+                    "type": "SPELL_AFTER_ATTACK",
+                    "subtype": "paadArcaneHindrance",
+                    "val": 100,
+                    "addInfo": [2, 0],
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "HINDRANCE_CRYSTAL_ACTIVE"
+                            }
+                        ]
+                    ]
+                },
+                "expertMark" : {
+                    "type" : "HINDRANCE_EXPERT_MARK"
+				}
+			}
+		}
+	}
+}

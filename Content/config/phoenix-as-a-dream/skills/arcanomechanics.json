@@ -1,0 +1,219 @@
+{
+	"paadArcanomechanics" : {
+		"name" : "Arcanomechanics",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsBasicLarge"
+			},
+			"description" : "{Basic Arcanomechanics}\n\nBasic Arcanomechanics increases arcanomechanical attack by 1 per hero level. During siege battles, allied arrow towers are considered arcanomechanical devices and can be controlled.\n{Twinborn} - Amber may forfeit her action to empower arcanomechanical devices, granting it one additional shot.",
+			"effects" : {
+				"attack" : {
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "attack",
+					"val": 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+                "amberCanCast" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "spell.paadInspireArcanomechanics",
+					"val": 1,
+                    "limiters" : [
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        }
+                    ]
+				},
+                "arrowTowerEnhance" : {
+                    "type" : "ARCANOMECHANICS",
+                    "limiters" : [
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "arrowTower",
+                            "includeUpgrades" : false
+                        }
+                    ]
+                },
+				"arrowTowerControl" : {
+					"subtype" : "creature.arrowTower",
+					"type" : "MANUAL_CONTROL",
+					"val" : 100,
+					"valueType" : "BASE_NUMBER"
+				}
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsAdvLarge"
+			},
+			"description" : "{Advanced Arcanomechanics}\n\nAdvanced Arcanomechanics increases arcanomechanical attack by 1 and damage by 5% per hero level. During siege battles, allied arrow towers are considered arcanomechanical devices and can be controlled.\n{Twinborn} - Amber may forfeit her action to empower arcanomechanical devices, granting it one additional shot and increasing its damage by 25%.",
+			"effects" : {
+				"attack" : {
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "attack",
+					"val": 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+				"damage" : {
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageBoth",
+					"val": 5,
+                    "valueType": "PERCENT_TO_ALL",
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+                "amberCanCast" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "spell.paadInspireArcanomechanics",
+					"val": 2,
+                    "limiters" : [
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        }
+                    ]
+				},
+                "arrowTowerEnhance" : {
+                    "type" : "ARCANOMECHANICS",
+                    "limiters" : [
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "arrowTower",
+                            "includeUpgrades" : false
+                        }
+                    ]
+                },
+				"arrowTowerControl" : {
+					"subtype" : "creature.arrowTower",
+					"type" : "MANUAL_CONTROL",
+					"val" : 100,
+					"valueType" : "BASE_NUMBER"
+				}
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsExpBonus",
+				"large" : "phoenix-as-a-dream/skills/arcanomechanics/arcanomechanicsExpLarge"
+			},
+			"description" : "{Expert Arcanomechanics}\n\nExpert Arcanomechanics increases arcanomechanical attack by 1 and damage by 5% per hero level. Every 5 hero levels, arcanomechanical devices gain 1 additional shot. During siege battles, allied arrow towers are considered arcanomechanical devices and can be controlled.\n{Twinborn} - Amber may forfeit her action to empower arcanomechanical devices, granting it one additional shot and increasing its damage by 50%.",
+			"effects" : {
+				"attack" : {
+					"type" : "PRIMARY_SKILL",
+					"subtype" : "attack",
+					"val": 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+				"damage" : {
+					"type" : "CREATURE_DAMAGE",
+					"subtype" : "creatureDamageBoth",
+					"val": 5,
+                    "valueType": "PERCENT_TO_ALL",
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+				"additionalAttack" : {
+					"type" : "ADDITIONAL_ATTACK",
+					"val": 1,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 5
+                    },
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+                "amberCanCast" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "spell.paadInspireArcanomechanics",
+					"val": 3,
+                    "limiters" : [
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        }
+                    ]
+				},
+                "arrowTowerEnhance" : {
+                    "type" : "ARCANOMECHANICS",
+                    "limiters" : [
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "arrowTower",
+                            "includeUpgrades" : false
+                        }
+                    ]
+                },
+				"arrowTowerControl" : {
+					"subtype" : "creature.arrowTower",
+					"type" : "MANUAL_CONTROL",
+					"val" : 100,
+					"valueType" : "BASE_NUMBER"
+				}
+			}
+		}
+	}
+}

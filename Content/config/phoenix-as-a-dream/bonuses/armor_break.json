@@ -1,0 +1,22 @@
+{ 
+    "RING_OF_ARMOR_BREAK_ACTIVE": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Ring Of Armor Break}\nRing Of Armor Break is active."
+    },
+    "ARMOR_BREAK_BASIC_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Armor Break Basic Mark}\nLearned Basic Armor Break."
+    },
+    "ARMOR_BREAK_ADVANCED_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Armor Break Advanced Mark}\nLearned Advanced Armor Break."
+    },
+    "ARMOR_BREAK_EXPERT_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Armor Break Expert Mark}\nLearned Expert Armor Break."
+    }
+}

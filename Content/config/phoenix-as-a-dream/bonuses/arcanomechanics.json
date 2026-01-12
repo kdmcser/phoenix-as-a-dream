@@ -1,0 +1,21 @@
+{
+    "ARCANOMECHANICS": {
+        "hidden" : false,
+        "creatureNature" : true,
+        "description" : "{Arcanomechanics}\nUnit is an arcanomechanics.",
+        
+        "graphics" : {
+            "icon" : "phoenix-as-a-dream/bonuses/arcanomechanics.png"
+        }
+    },
+    "SNIPPER_ACTIVE": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Snipper}\nSnipper is active."
+    },   
+    "DESTROYER_ACTIVE": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Destroyer}\nDestroyer is active."
+    }
+}

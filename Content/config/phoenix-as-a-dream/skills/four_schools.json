@@ -5,17 +5,35 @@
 			"might" : 0,
 			"magic" : 0
 		},
+        "banInMapObjects" : true,
+        "specialty" : [],
 		"basic" : {
 			"images" : {
 				"small" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsBasicSmall",
 				"medium" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsBasicBonus",
 				"large" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsBasicLarge"
 			},
 			"description" : "{Basic Four Schools}\n\nBasic Four Schools allows your hero to cast four schools spells at reduced cost.",
 			"effects" : {
-				"magicSchoolSkill" : {
+				"magicSchoolSkillAir" : {
 					"type" : "MAGIC_SCHOOL_SKILL",
-					"subtype" : "any",
+					"subtype" : "air",
+					"val": 1
+				},
+                "magicSchoolSkillEarth" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "earth",
+					"val": 1
+				},
+                "magicSchoolSkillFire" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "fire",
+					"val": 1
+				},
+                "magicSchoolSkillWater" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "water",
 					"val": 1
 				}
 			}
@@ -24,13 +42,29 @@
 			"images" : {
 				"small" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsAdvSmall",
 				"medium" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsAdvBonus",
 				"large" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsAdvLarge"
 			},
-			"description" : "{Advanced Four Schools}}\n\nAdvanced Four Schools allows your hero to cast four schools spells at reduced cost and increased effectiveness.",
+			"description" : "{Advanced Four Schools}\n\nAdvanced Four Schools allows your hero to cast four schools spells at reduced cost and increased effectiveness.",
 			"effects" : {
-				"magicSchoolSkill" : {
+				"magicSchoolSkillAir" : {
 					"type" : "MAGIC_SCHOOL_SKILL",
-					"subtype" : "any",
+					"subtype" : "air",
+					"val": 2
+				},
+                "magicSchoolSkillEarth" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "earth",
+					"val": 2
+				},
+                "magicSchoolSkillFire" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "fire",
+					"val": 2
+				},
+                "magicSchoolSkillWater" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "water",
 					"val": 2
 				}
 			}
@@ -39,13 +73,29 @@
 			"images" : {
 				"small" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsExpSmall",
 				"medium" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsExpBonus",
 				"large" : "phoenix-as-a-dream/skills/fourSchools/fourSchoolsExpLarge"
 			},
 			"description" : "{Expert Four Schools}\n\nExpert Four Schools allows your hero to cast four schools spells at reduced cost and maximum effectiveness.",
 			"effects" : {
-				"magicSchoolSkill" : {
+				"magicSchoolSkillAir" : {
 					"type" : "MAGIC_SCHOOL_SKILL",
-					"subtype" : "any",
+					"subtype" : "air",
+					"val": 3
+				},
+                "magicSchoolSkillEarth" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "earth",
+					"val": 3
+				},
+                "magicSchoolSkillFire" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "fire",
+					"val": 3
+				},
+                "magicSchoolSkillWater" : {
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"subtype" : "water",
 					"val": 3
 				}
 			}

@@ -1,0 +1,46 @@
+{
+	"paadSacrificeSnipper" : 
+	{
+		"type": "combat",
+		"targetType" : "CREATURE",
+		"name" : "Sacrifice",
+		"school": {"air":false, "earth":false, "fire":false, "water":false},
+		"level": 5,
+		"power": 10000000,
+		"defaultGainChance": 0, 		
+		"gainChance":{},
+		"counters": {},	
+        "animation" : {
+			"affect" : ["phoenix-as-a-dream/spells/arcanomechanics/sacrificeSnipper.def"]
+		},
+		"levels" : 
+		{
+			
+			"base":{
+				"description": "Kill all allied creatures except Amber and arcanomechanics.",
+				"cost": 0,
+				"power": 0,
+				"range" : "X",
+				"targetModifier":{"smart":true},
+				"battleEffects" : {
+					"directDamage" : {"type":"core:damage"}
+				},
+			},	
+			"none": {},
+			"basic": {},
+			"advanced": {},
+			"expert": {},
+		},
+		"targetCondition" : {
+            "noneOf": {
+                "bonus.ARCANOMECHANICS":"absolute", 
+                "phoenix-as-a-dream:creature.paadAmberCommander":"absolute"
+            }
+        },		
+		"flags" : {
+			"positive": true,
+            "damage": true,
+			"special": true
+		}
+	}
+}

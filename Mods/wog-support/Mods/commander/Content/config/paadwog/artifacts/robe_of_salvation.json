@@ -5,14 +5,14 @@
 		"class" : "TREASURE",
 		"value" : 1000,
 		"bonuses" : 
-		[
-			{
+		{
+			"immuneArmageddon" : {
 				"type" : "SPELL_IMMUNITY",
 				"subtype" : "spell.armageddon"
 			}
-		],
+		},
 		"graphics" : {
-			"large" : "paadwog/artifacts/robeOfSalvationLarge",
+			"scenarioBonus" : "paadwog/artifacts/robeOfSalvationLarge",
 			"image" : "paadwog/artifacts/robeOfSalvationMedium",
 			"map" : "paadwog/map/artifacts/robeOfSalvation.def"
 		},

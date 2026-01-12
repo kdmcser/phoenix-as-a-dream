@@ -1,0 +1,187 @@
+{
+	"paadWindSupply" : {
+		"name" : "Wind Supply",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSupply/windSupplyBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSupply/windSupplyBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSupply/windSupplyBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windSupply/windSupplyBasicLarge"
+			},
+			"description" : "{Basic Wind Supply}\n\nBasic Wind Supply increases the ammunition of allied ranged units by 34% and restores 10% of the hero's mana each day.",
+			"effects" : {
+				"shotsPercentage" : {
+					"type" : "SHOTS",
+					"val"  : 34,
+					"valueType" : "PERCENT_TO_ALL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+ 				"manaRegeneration" : {
+					"type" : "MANA_PERCENTAGE_REGENERATION",
+					"val"  : 10
+				}   
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSupply/windSupplyAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSupply/windSupplyAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSupply/windSupplyAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windSupply/windSupplyAdvLarge"
+			},
+			"description" : "{Advanced Wind Supply}\n\nAdvanced Wind Supply increases the ammunition of allied ranged units by 67% and restores 20% of the hero's mana each day.",
+			"effects" : {
+				"shotsPercentage" : {
+					"type" : "SHOTS",
+					"val"  : 67,
+					"valueType" : "PERCENT_TO_ALL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+ 				"manaRegeneration" : {
+					"type" : "MANA_PERCENTAGE_REGENERATION",
+					"val"  : 20
+				}    
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSupply/windSupplyExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSupply/windSupplyExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSupply/windSupplyExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windSupply/windSupplyExpLarge"
+			},
+			"description" : "{Expert Wind Supply}\n\nExpert Wind Supply increases the ammunition of allied ranged units by 100% and restores 30% of the hero's mana each day. If hero learn 8 wind skills at expert level, these ranged units gain unlimited ammunition, and the hero's mana is fully restored each day.",
+			"effects" : {
+				"shotsPercentage" : {
+					"type" : "SHOTS",
+					"val"  :100,
+					"valueType" : "PERCENT_TO_ALL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+ 				"manaRegeneration" : {
+					"type" : "MANA_PERCENTAGE_REGENERATION",
+					"val"  : 30
+				},
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},	
+				"unlimitedShots" : {
+					"type": "SHOTS",
+					"val" : 999999,
+					"valueType" : "INDEPENDENT_MIN",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"manaRegenerationExtra" : {
+					"type": "MANA_PERCENTAGE_REGENERATION",
+					"val" : 70,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}   
+			}
+		}
+	}
+}

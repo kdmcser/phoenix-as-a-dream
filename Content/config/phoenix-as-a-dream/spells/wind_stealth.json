@@ -1,0 +1,121 @@
+{
+	"paadWindStealth" : {
+		"type" : "combat",
+		"name" : "Wind Stealth",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false
+		},
+		"targetType" : "CREATURE",
+		"level" : 0,
+		"power" : 10,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"animation" : {
+			"affect" :["phoenix-as-a-dream/spells/windStealth/windStealth.def"]
+		},
+		"flags" : {
+			"positive" : true,
+			"special" : true
+		},
+		"sounds" : {
+			"cast" : "FEAR"
+		},
+		"graphics" : {
+			"iconBook" : "phoenix-as-a-dream/spells/windStealth/windStealthBook.png",
+			"iconScroll" : "phoenix-as-a-dream/spells/windStealth/windStealthScroll.png",
+			"iconScenarioBonus" : "phoenix-as-a-dream/spells/windStealth/windStealthScenarioBonus.png",
+			"iconEffect" : "phoenix-as-a-dream/spells/windStealth/windStealthEffect.png"
+		},
+		"levels" : {
+			"base" : {
+				"range" : "X",
+				"power" : 10,
+				"cost" : 0,
+				"targetModifier" : {
+					"smart" : true
+				},
+				"battleEffects" : {
+					"windStealthEffect" : {
+						"type" : "core:timed",
+						"cumulative" : false,
+						"ignoreImmunity" : true,
+						"bonus" : {
+							"windStealth" : {
+								"type" : "INVINCIBLE",
+								"duration" : ["N_TURNS", "UNTIL_OWN_ATTACK"],
+								"turns" : 2
+							},
+							"windStealthDamageMelee" : {
+								"val" : 10,
+								"type" : "PERCENTAGE_DAMAGE_BOOST",
+								"subtype": "damageTypeMelee",
+								"duration" : ["N_TURNS", "UNTIL_OWN_ATTACK"],
+								"turns" : 2
+							},
+							"windStealthDamageRanged" : {
+								"val" : 10,
+								"type" : "PERCENTAGE_DAMAGE_BOOST",
+								"subtype": "damageTypeRanged",
+								"duration" : ["N_TURNS", "UNTIL_OWN_ATTACK"],
+								"turns" : 2
+							}	
+						}
+					}						
+				}
+			},
+			"none" :
+			{
+				"description" : "{Wind Stealth}\r\n\r\nWind Stealth causes all allied creatures to enter stealth, making them untargetable by attacks or spells. Stealth is removed after the creature attacks and lasts for a maximum of 1 turn. Attacks made while in Stealth deal 10% increased damage."
+			},
+			"basic" :
+			{
+				"description" : "{Basic Wind Stealth}\r\n\r\nBasic Wind Stealth causes all allied creatures to enter stealth, making them untargetable by attacks or spells. Stealth is removed after the creature attacks and lasts for a maximum of 1 turn. Attacks made while in Stealth deal 10% increased damage."
+			},
+			"advanced" :
+			{
+				"battleEffects" : {
+					"windStealthEffect" : {
+						"bonus" : {
+							"windStealth" : {
+								"turns" : 3
+							},
+							"windStealthDamageMelee" : {
+								"val" : 20,
+								"turns" : 3
+							},
+							"windStealthDamageRanged" : {
+								"val" : 20,
+								"turns" : 3
+							}
+						}
+					}
+				},
+				"description" : "{Advanced Wind Stealth}\r\n\r\nAdvanced Wind Stealth causes all allied creatures to enter stealth, making them untargetable by attacks or spells. Stealth is removed after the creature attacks and lasts for a maximum of 2 turn. Attacks made while in Stealth deal 20% increased damage."
+			},
+			"expert" :
+			{
+				"battleEffects" : {
+					"windStealthEffect" : {
+						"bonus" : {
+							"windStealth" : {
+								"turns" : 4
+							},
+							"windStealthDamageMelee" : {
+								"val" : 30,
+								"turns" : 4
+							},
+							"windStealthDamageRanged" : {
+								"val" : 30,
+								"turns" : 4
+							}
+						}
+					}
+				},
+				"description" : "{Expert Wind Stealth}\r\n\r\nExpert Wind Stealth causes all allied creatures to enter stealth, making them untargetable by attacks or spells. Stealth is removed after the creature attacks and lasts for a maximum of 3 turn. Attacks made while in Stealth deal 30% increased damage."
+			}
+		}
+	}
+}

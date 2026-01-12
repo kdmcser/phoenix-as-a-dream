@@ -1,0 +1,146 @@
+{
+	"paadWindSwiftness" : {
+		"name" : "Wind Swiftness",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessBasicLarge"
+			},
+			"description" : "{Basic Wind Swiftness}\n\nBasic Wind Swiftness increases the hero's movement points on land and sea by 150, and increases the speed of all friendly shooters by 1.",
+			"effects" : {
+				"movementLand" : {
+					"type" : "MOVEMENT",
+					"subtype" : "heroMovementLand",
+					"val"  : 150
+				},
+				"movementSea" : {
+					"type" : "MOVEMENT",
+					"subtype" : "heroMovementSea",
+					"val"  : 150
+				},
+ 				"speed" : {
+					"type" : "STACKS_SPEED",
+					"val"  : 1,
+					"limiters" : [ "SHOOTER_ONLY" ]
+				}   
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessAdvLarge"
+			},
+			"description" : "{Advanced Wind Swiftness}\n\nAdvanced Wind Swiftness increases the hero's movement points on land and sea by 300, and increases the speed of all friendly shooters by 2.",
+			"effects" : {
+				"movementLand" : {
+					"type" : "MOVEMENT",
+					"subtype" : "heroMovementLand",
+					"val"  : 300
+				},
+				"movementSea" : {
+					"type" : "MOVEMENT",
+					"subtype" : "heroMovementSea",
+					"val"  : 300
+				},
+ 				"speed" : {
+					"type" : "STACKS_SPEED",
+					"val"  : 2,
+					"limiters" : [ "SHOOTER_ONLY" ]
+				}   
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windSwiftness/windSwiftnessExpLarge"
+			},
+			"description" : "{Expert Wind Swiftness}\n\nExpert Wind Swiftness increases the hero's movement points on land and sea by 450, and increases the speed of all friendly shooters by 3.If hero learn Expert Wind Arcana, hero will gain access to the spells of fast movement on the Adventure Map. If hero learn 8 wind skills at expert level, all terrains become native terrain.",
+			"effects" : {
+				"movementLand" : {
+					"type" : "MOVEMENT",
+					"subtype" : "heroMovementLand",
+					"val"  : 450
+				},
+				"movementSea" : {
+					"type" : "MOVEMENT",
+					"subtype" : "heroMovementSea",
+					"val"  : 450
+				},
+ 				"speed" : {
+					"type" : "STACKS_SPEED",
+					"val"  : 3,
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},	
+				"terrainNative" : {
+					"type": "TERRAIN_NATIVE",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}     
+			}
+		}
+	}
+}

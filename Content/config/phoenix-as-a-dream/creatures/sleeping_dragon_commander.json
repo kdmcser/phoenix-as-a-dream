@@ -58,10 +58,18 @@
 		"speed" : 4,
 		"abilities":
 		{
-			"magicResistance" :
+			"reduceSpellDamage" :
 			{
-				"type" : "MAGIC_RESISTANCE",
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
 				"val" : 10
+			},	
+			"reduceSpellDamageMax" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"valueType" : "INDEPENDENT_MIN",
+				"val" : 100
 			},
 			"alwaysFirst" : {
 				"type" : "ENCHANTED",

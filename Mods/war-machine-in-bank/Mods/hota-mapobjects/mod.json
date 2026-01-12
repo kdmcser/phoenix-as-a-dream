@@ -1,0 +1,38 @@
+{
+	"name" : "War Machine In Bank - HotA Map Objects",
+	"description" : "Set the war machine position for the banks in HotA Map Objects.",
+	"author": "kdmcser",
+	"version" : "1.0.0",
+	"contact": "",
+	"modType" : "Compatibility",
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},	
+	"changelog" :
+	{
+		"1.0.0"   : [ "Initial release" ]
+	},
+    "depends" : ["hota.mapobjects"],
+	"settings" : 
+	{
+        "combat":
+		{
+            "layouts" : 
+            {
+                "creatureBankChurchyard" : 
+                {
+                    "attackerWarMachines" : [ 59, 91, 127, null ]
+                },
+                "creatureBankBlackTower" : 
+                {
+                    "attackerWarMachines" : [ 52, 18, 154, null ]
+                }
+            }
+        }
+	},
+	"chinese" : {
+        "name" : "战争机器进宝屋 - 深渊号角地图物体",
+		"description" : "设置深渊号角地图物体模组中宝屋的战争机器位置"
+	}
+}

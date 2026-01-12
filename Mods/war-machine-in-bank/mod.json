@@ -1,0 +1,37 @@
+{
+	"name" : "War Machine In Bank",
+	"description" : "War machines are allowed to be deployed by the attacker in creature banks. It is recommended to enable this option when using the hero Ash.",
+	"author": "kdmcser",
+	"version" : "1.0.0",
+	"contact": "",
+	"modType" : "Mechanics",
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},	
+	"changelog" :
+	{
+		"1.0.0"   : [ "Initial release" ]
+	},
+	"settings" : 
+	{
+        "combat":
+		{
+            "layouts" : 
+            {
+                "creatureBankNarrow" : 
+                {
+                    "attackerWarMachines" : [ 59, 91, 127, null ],
+                },
+                "creatureBankWide" : 
+                {
+                    "attackerWarMachines" : [ 59, 91, 127, null ],
+                }
+            }
+        }
+	},
+	"chinese" : {
+		"name" : "战争机器进宝屋",
+		"description" : "在怪物宝物内允许进攻方放置战争机器，建议使用艾许英雄的时候启用。"
+	}
+}

@@ -2,121 +2,21 @@
 	"phoenix-as-a-dream:paadPhoenixsStaff":
      {
 		"bonuses" : 
-		[
-			{
-				"type" : "PRIMARY_SKILL",
-				"subtype" : "primarySkill.attack",
-				"val": 3
-			},
-			{
-				"type" : "PRIMARY_SKILL",
-				"subtype" : "primarySkill.defence",
-				"val": 3
-			},
-			{
-				"type" : "MORALE",
-				"val": 3	
-			},
-			{
-				"type" : "LUCK",
-				"val": 3	
-			},
-			{
-				"type" : "STACK_HEALTH",
-				"val": 15,
-				"valueType" : "PERCENT_TO_BASE"
-			},
-			{
-				"type" : "STACK_HEALTH",
-				"val": 1,
-				"valueType" : "ADDITIVE_VALUE"
-			},
-			{
-				"type": "CREATURE_DAMAGE",
-				"subtype": "creatureDamageBoth",
-				"val": 15,
-				"valueType" : "PERCENT_TO_BASE"
-			},
-			{
-				"type": "CREATURE_DAMAGE",
-				"subtype": "creatureDamageBoth",
-				"val": 1,
-				"valueType" : "ADDITIVE_VALUE"
-			},
-			{
-				"type" : "STACKS_SPEED",
-				"val": 3
-			},
-			{
-				"type" : "UNDEAD_RAISE_PERCENTAGE",
-				"val" : 0,
-				"valueType" : "INDEPENDENT_MIN",
-				"limiters" : [
-					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PRIMARY_SKILL",
-							"primarySkill.attack",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
-					}
-				]
-			},
-			{
-				"type" : "IMPROVED_NECROMANCY",
-				"subtype" : "creature.firebird",
-				"limiters" : [
-					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PRIMARY_SKILL",
-							"primarySkill.attack",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
-					}
-				]
-			},
-			{
-				"type" : "IMPROVED_NECROMANCY",
-				"subtype" : "creature.phoenix",
-				"limiters" : [
-					{
-						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"MORALE",
-							null,
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
-					}
-				]
-			},
-			{
+		{
+			"necromancySacredPhoenix": {
 				"type" : "IMPROVED_NECROMANCY",
 				"subtype" : "creature.sacredPhoenix",
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"STACKS_SPEED",
-							null,
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
+						"bonusType" : "STACKS_SPEED",
+						"bonusSubtype" : null,
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "paadPhoenixsBless"
 					}
 				]
 			}
-		]
+		}
 	}
 }
 

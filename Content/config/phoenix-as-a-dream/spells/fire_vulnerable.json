@@ -14,7 +14,7 @@
 		"defaultGainChance" : 0,
 		"gainChance" : {},
 		"animation" : {
-			"affect" :["phoenix-as-a-dream/spells/fireVulnerable.def"]
+			"affect" :["phoenix-as-a-dream/spells/fireVulnerable/fireVulnerable.def"]
 		},
 		"flags" : {
 			"negative" : true,
@@ -24,16 +24,15 @@
 			"cast" : "FEAR"
 		},
 		"graphics" : {
-			"iconBook" : "phoenix-as-a-dream/spells/fireVulnerableBook.png",
-			"iconScroll" : "phoenix-as-a-dream/spells/fireVulnerableScroll.png",
-			"iconScenarioBonus" : "phoenix-as-a-dream/spells/fireVulnerableScenarioBonus.png",
-			"iconEffect" : "phoenix-as-a-dream/spells/fireVulnerableEffect.png"
+			"iconBook" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableBook.png",
+			"iconScroll" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableScroll.png",
+			"iconScenarioBonus" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableScenarioBonus.png",
+			"iconEffect" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableEffect.png"
 		},
 		"levels" : {
 			"base" : {
 				"range" : "0",
 				"power" : 10,
-				"aiValue" : 20,
 				"targetModifier" : {
 					"smart" : true
 				},

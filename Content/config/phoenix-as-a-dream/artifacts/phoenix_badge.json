@@ -6,20 +6,20 @@
 		"class" : "RELIC",
 		"value" : 8000,
 		"bonuses" : 
-		[
-			{
+		{
+			"rebirth" : {
 				"type" : "REBIRTH",
 				"val" : 20,
 				"valueType" : "ADDITIVE_VALUE"
 			},
-			{
+			"upgrade" :{
 				"type" : "SPECIAL_UPGRADE",
 				"subtype" : "creature.paadGoldenSunElement",
 				"addInfo" : "creature.firebird"
 			}
-		],
+		},
 		"graphics" : {
-			"large" : "phoenix-as-a-dream/artifacts/phoenixBadgeLarge",
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/phoenixBadgeLarge",
 			"image" : "phoenix-as-a-dream/artifacts/phoenixBadgeMedium",
 			"map" : "phoenix-as-a-dream/map/artifacts/phoenixBadge.def"
 		},

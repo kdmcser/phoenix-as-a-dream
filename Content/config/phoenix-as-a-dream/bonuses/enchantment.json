@@ -1,0 +1,22 @@
+{  
+    "ARCANOMECHANICAL_AMULET_ACTIVE": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Arcanomechanical Amulet}\nArcanomechanical Amulet is active."
+    },
+    "ENCHANTMENT_BASIC_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Enchantment Basic Mark}\nLearned Basic Enchantment."
+    },
+    "ENCHANTMENT_ADVANCED_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Enchantment Advanced Mark}\nLearned Advanced Enchantment."
+    },
+    "ENCHANTMENT_EXPERT_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Enchantment Expert Mark}\nLearned Expert Enchantment."
+    }
+}

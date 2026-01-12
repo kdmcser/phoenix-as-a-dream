@@ -1,0 +1,119 @@
+{
+	"paadControlMagic" : {
+		"name" : "Control Magic",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "pacifism-balance/skills/controlMagic/controlMagicBasicSmall",
+				"medium" : "pacifism-balance/skills/controlMagic/controlMagicBasicMedium",
+				"scenarioBonus" : "pacifism-balance/skills/controlMagic/controlMagicBasicBonus.png",
+				"large" : "pacifism-balance/skills/controlMagic/controlMagicBasicLarge"
+			},
+			"description" : "{Basic Control Magic}\n\nBasic Control Magic allows your hero to cast slow and blind.",
+			"effects" : {
+				"canCastSlow" : {
+					"type" : "SPELL",
+					"subtype" : "slow",
+					"val": 0
+				},
+                "canCastBlind" : {
+					"type" : "SPELL",
+					"subtype" : "blind",
+					"val": 0
+				}
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "pacifism-balance/skills/controlMagic/controlMagicAdvSmall",
+				"medium" : "pacifism-balance/skills/controlMagic/controlMagicAdvMedium",
+				"scenarioBonus" : "pacifism-balance/skills/controlMagic/controlMagicAdvBonus.png",
+				"large" : "pacifism-balance/skills/controlMagic/controlMagicAdvLarge"
+			},
+			"description" : "{Advanced Control Magic}\n\nAdvanced Control Magic allows your hero to cast slow, blind, forgetfulness, hypnotize, sorrow and berserk.",
+			"effects" : {
+				"canCastSlow" : {
+					"type" : "SPELL",
+					"subtype" : "slow",
+					"val": 0
+				},
+                "canCastBlind" : {
+					"type" : "SPELL",
+					"subtype" : "blind",
+					"val": 0
+				},
+				"canCastForgetfulness" : {
+					"type" : "SPELL",
+					"subtype" : "forgetfulness",
+					"val": 0
+				},
+                "canCastHypnotize" : {
+					"type" : "SPELL",
+					"subtype" : "hypnotize",
+					"val": 0
+				},
+                "canCastSorrow" : {
+					"type" : "SPELL",
+					"subtype" : "sorrow",
+					"val": 0
+				},
+                "canCastBerserk" : {
+					"type" : "SPELL",
+					"subtype" : "berserk",
+					"val": 0
+				}
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "pacifism-balance/skills/controlMagic/controlMagicExpSmall",
+				"medium" : "pacifism-balance/skills/controlMagic/controlMagicExpMedium",
+				"scenarioBonus" : "pacifism-balance/skills/controlMagic/controlMagicExpBonus.png",
+				"large" : "pacifism-balance/skills/controlMagic/controlMagicExpLarge"
+			},
+			"description" : "{Expert Control Magic}\n\nExpert Control Magic allows your hero to cast slow, blind, forgetfulness, hypnotize, sorrow, berserk and true pacifism.",
+			"effects" : {
+				"canCastSlow" : {
+					"type" : "SPELL",
+					"subtype" : "slow",
+					"val": 0
+				},
+                "canCastBlind" : {
+					"type" : "SPELL",
+					"subtype" : "blind",
+					"val": 0
+				},
+				"canCastForgetfulness" : {
+					"type" : "SPELL",
+					"subtype" : "forgetfulness",
+					"val": 0
+				},
+                "canCastHypnotize" : {
+					"type" : "SPELL",
+					"subtype" : "hypnotize",
+					"val": 0
+				},
+                "canCastSorrow" : {
+					"type" : "SPELL",
+					"subtype" : "sorrow",
+					"val": 0
+				},
+                "canCastBerserk" : {
+					"type" : "SPELL",
+					"subtype" : "berserk",
+					"val": 0
+				},
+                "canCastTruePacifism" : {
+					"type" : "SPELL",
+					"subtype" : "paadTruePacifism",
+					"val": 0
+				}
+			}
+		}
+	}
+}

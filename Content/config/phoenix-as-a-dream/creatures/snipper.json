@@ -1,0 +1,97 @@
+{
+	"paadSnipper":
+	{
+		"name" :
+		{
+			"plural" : "Snipper",
+			"singular" : "Snipper"
+		},
+		"faction" : "dungeon",
+		"level": 10,
+		"aiValue" :0,
+		"special" : true,
+		"attack" : 10,
+		"cost": 
+		{
+		  "gold": 5000
+		},
+		"damage" :
+		{
+			"max" : 15,
+			"min" : 10
+		},
+		"defense" : 100000,
+		"fightValue" : 0,
+		"graphics" :
+		{
+			"animation" : "phoenix-as-a-dream/battle/creatures/snipper.def",
+			"map" : "phoenix-as-a-dream/map/creatures/snipper_map.def",
+			"iconSmall" : "phoenix-as-a-dream/iconsSmall/creatures/snipper_small.png",
+			"iconLarge" : "phoenix-as-a-dream/iconsBig/creatures/snipper_large.png",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.00,
+				"idle" : 10.00,
+				"attack" : 1.00
+			},
+			"missile" :
+			{
+				"projectile": "phoenix-as-a-dream/shots/snipper_shots.def",
+				"attackClimaxFrame" : 4,
+				"offset" :
+				{
+					"lowerX" : 62,
+					"lowerY" : -93,
+					"middleX" : 62,
+					"middleY" : -93,
+					"upperX" : 62,
+					"upperY" : -93
+				},
+				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
+			}
+		},
+		"doubleWide" : true,
+		"growth" : 0,
+		"hitPoints" : 100000000,
+        "shots" : 100000,
+		"speed" : 0,
+		"sound" :
+		{
+			"killed": "PHOEKILL.wav",
+			"shoot": "ICELATTK.wav",
+			"wince": "PHOEWNCE.wav"
+		},
+		"abilities" :
+		{
+        	"shooter" :
+			{
+				"type" : "SHOOTER"
+			},
+            "physicalDamageImmunity" : {
+                "type" : "GENERAL_DAMAGE_REDUCTION",
+                "subtype" : "damageTypeAll",
+                "val" : 100,
+                "valueType" : "INDEPENDENT_MAX"
+            },
+            "spellDamageImmunity" : {
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+                "val" : 100,
+                "valueType" : "INDEPENDENT_MAX"
+            },  
+			"invincible" :
+			{
+				"type" : "INVINCIBLE"
+			},            
+			"warmachine" :
+			{
+				"type" : "SIEGE_WEAPON"
+			},            
+			"arcanomechanics" :
+			{
+				"type" : "ARCANOMECHANICS"
+			}
+		}
+	}
+}

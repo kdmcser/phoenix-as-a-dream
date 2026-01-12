@@ -22,10 +22,10 @@
 		},
 		"graphics":
 		{
-			"iconBook": "phoenix-as-a-dream/spells/SommonPhoenixBook",
-			"iconScroll": "phoenix-as-a-dream/spells/SommonPhoenixScroll",
-			"iconScenarioBonus": "phoenix-as-a-dream/spells/SommonPhoenixScenarioBonus",
-			"iconEffect": "phoenix-as-a-dream/spells/SommonPhoenixEffect"
+			"iconBook": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixBook",
+			"iconScroll": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixScroll",
+			"iconScenarioBonus": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixScenarioBonus",
+			"iconEffect": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixEffect"
 		},
 		"animation":
 		{
@@ -41,7 +41,6 @@
 			{
 				"description": "{Summon Phoenix}\r\n\r\nSummon phoenix allow hero to summon firebird during the battle, it will be kept in army after battle.",
 				"power": 50,
-				"aiValue": 10,
 				"cost": 90,
 				"range": "X",
 				"targetModifier":{"smart":true},

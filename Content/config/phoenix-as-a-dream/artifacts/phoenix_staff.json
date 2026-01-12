@@ -6,106 +6,94 @@
 		"class" : "RELIC",
 		"value" : 20000,
 		"bonuses" : 
-		[
-			{
+		{
+			"attack" : {
 				"type" : "PRIMARY_SKILL",
 				"subtype" : "primarySkill.attack",
 				"val": 3
 			},
-			{
+			"defence" : {
 				"type" : "PRIMARY_SKILL",
 				"subtype" : "primarySkill.defence",
 				"val": 3
 			},
-			{
+			"morale" : {
 				"type" : "MORALE",
 				"val": 3	
 			},
-			{
+			"luck" : {
 				"type" : "LUCK",
 				"val": 3	
 			},
-			{
+			"health" : {
 				"type" : "STACK_HEALTH",
 				"val": 15,
 				"valueType" : "PERCENT_TO_BASE"
 			},
-			{
+			"health2" : {
 				"type" : "STACK_HEALTH",
 				"val": 1,
 				"valueType" : "ADDITIVE_VALUE"
 			},
-			{
+			"damage" : {
 				"type": "CREATURE_DAMAGE",
 				"subtype": "creatureDamageBoth",
 				"val": 15,
 				"valueType" : "PERCENT_TO_BASE"
 			},
-			{
+			"damage2" : {
 				"type": "CREATURE_DAMAGE",
 				"subtype": "creatureDamageBoth",
 				"val": 1,
 				"valueType" : "ADDITIVE_VALUE"
 			},
-			{
+			"speed" : {
 				"type" : "STACKS_SPEED",
 				"val": 3
 			},
-			{
+			"undeadRaise" : {
 				"type" : "UNDEAD_RAISE_PERCENTAGE",
 				"val" : 0,
 				"valueType" : "INDEPENDENT_MIN",
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PRIMARY_SKILL",
-							"primarySkill.attack",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
+						"bonusType" : "PRIMARY_SKILL",
+						"bonusSubtype" : "attack",
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "paadPhoenixsBless"
 					}
 				]
 			},
-			{
+			"necromancyFirebird" : {
 				"type" : "IMPROVED_NECROMANCY",
 				"subtype" : "creature.firebird",
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"PRIMARY_SKILL",
-							"primarySkill.attack",
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
+						"bonusType" : "PRIMARY_SKILL",
+						"bonusSubtype" : "attack",
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "paadPhoenixsBless"
 					}
 				]
 			},
-			{
+			"necromancyPhoenix" : {
 				"type" : "IMPROVED_NECROMANCY",
 				"subtype" : "creature.phoenix",
 				"limiters" : [
 					{
 						"type" : "HAS_ANOTHER_BONUS_LIMITER",
-						"parameters" : [
-							"MORALE",
-							null,
-							{
-								"type" : "SECONDARY_SKILL",
-								"id" : "secondarySkill.paadPhoenixsBless"
-							}
-						]
+						"bonusType" : "MORALE",
+						"bonusSubtype" : null,
+						"bonusSourceType" : "SECONDARY_SKILL",
+						"bonusSourceID" : "paadPhoenixsBless"
 					}
 				]
 			}
-		],
+		},
 		"graphics" : {
-			"large" : "phoenix-as-a-dream/artifacts/phoenixStaffLarge",
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/phoenixStaffLarge",
 			"image" : "phoenix-as-a-dream/artifacts/phoenixStaffMedium",
 			"map" : "phoenix-as-a-dream/map/artifacts/phoenixStaff.def"
 		},

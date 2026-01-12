@@ -28,6 +28,10 @@
 	[
 		"config/paadwog/classes/phoenix_class.json"
 	],
+	"heroes" :
+	[
+		"config/paadwog/heroes/ash_amber.json"
+	],
 	"objects" :
 	[
 		"config/paadwog/banks/sacred_trial_ground.json",

@@ -1,0 +1,721 @@
+{
+	"paadEnchantment" : {
+		"name" : "Enchantment",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/enchantment/enchantmentBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/enchantment/enchantmentBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/enchantment/enchantmentBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/enchantment/enchantmentBasicLarge"
+			},
+			"description" : "{Basic Enchantment}\n\nBasic Enchantment allows arcanomechanical devices to receive enchantments.\n\tSnipper: Adds a lightning bolt after each attack, dealing 20 + 10 × hero level damage.\n\tDestroyer: Shoots fireball on attack (This attack does not benefit from effects that reduce enemy fire resistance).\n\tArrow Tower: Gain the same enchantments as the equipped arcanomechanical device.\n{Twinborn} – Amber's spell casts are doubled. Amber may use a bonus action before acting to place a mark on an enemy without affecting her attack or movement. The mark applied depends on the arcanomechanical device:\n\tSnipper: Applies Basic Weak Air Mark, reducing the target's air resistance by 50%\n\tDestroyer: Applies Basic Weak Fire Mark, reducing the target's fire resistance by 50%.",
+			"effects" : {
+				"snipperEnchantment" : {
+					"type" : "SPELL_AFTER_ATTACK",
+					"subtype" : "lightningBolt",
+					"val": 100,
+                    "addInfo": [1, 1],
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "snipperEnchantmentPower" : {
+					"type" : "SPECIFIC_SPELL_POWER",
+					"subtype" : "lightningBolt",
+					"val": 20,
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "snipperEnchantmentPowerUpdater" : {
+					"type" : "SPECIFIC_SPELL_POWER",
+					"subtype" : "lightningBolt",
+					"val": 10,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters": [
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "destroyerEnchantment" :{
+                    "type" : "SPELL_LIKE_ATTACK",
+                    "subtype" : "fireball",
+                    "val" : 1,
+                    "limiters" : [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadDestroyer",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]   
+                },
+                "amberCasts" : {
+					"type" : "CASTS",
+					"valueType" : "PERCENT_TO_ALL",
+					"val": 100,
+                },
+                "amberCanCastSnipper" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "paadWeakAirMark",
+					"val": 1,
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "SNIPPER_ACTIVE"
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "amberCanCastDestroyer" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "paadWeakFireMark",
+					"val": 1,
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "DESTROYER_ACTIVE"
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "basicMark" : {
+                    "type" : "ENCHANTMENT_BASIC_MARK"
+				}
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/enchantment/enchantmentAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/enchantment/enchantmentAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/enchantment/enchantmentAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/enchantment/enchantmentAdvLarge"
+			},
+			"description" : "{Advanced Enchantment}\n\nAdvanced Enchantment allows arcanomechanical devices to receive enchantments.\n\tSnipper: Adds a titan bolt after each attack, dealing 35 + 15 × hero level damage.\n\tDestroyer: Shoots inferno on attack (This attack does not benefit from effects that reduce enemy fire resistance).\n\tArrow Tower: Gain the same enchantments as the equipped arcanomechanical device.\n{Twinborn} – Amber's spell casts are doubled. Amber may use a bonus action before acting to place a mark on an enemy without affecting her attack or movement. The mark applied depends on the arcanomechanical device:\n\tSnipper: Applies Advanced Weak Air Mark, reducing the target's air resistance by 75%\n\tDestroyer: Applies Advanced Weak Fire Mark, reducing the target's fire resistance by 75%.",
+			"effects" : {
+				"snipperEnchantment" : {
+					"type" : "SPELL_AFTER_ATTACK",
+					"subtype" : "titanBolt",
+					"val": 100,
+                    "addInfo": [2, 1],
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "snipperEnchantmentPower" : {
+					"type" : "SPECIFIC_SPELL_POWER",
+					"subtype" : "titanBolt",
+					"val": 35,
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "snipperEnchantmentPowerUpdater" : {
+					"type" : "SPECIFIC_SPELL_POWER",
+					"subtype" : "lightningBolt",
+					"val": 15,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "destroyerEnchantment" :{
+                    "type" : "SPELL_LIKE_ATTACK",
+                    "subtype" : "inferno",
+                    "val" : 2,
+                    "limiters" : [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadDestroyer",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]   
+                },
+                "amberCasts" : {
+					"type" : "CASTS",
+					"valueType" : "PERCENT_TO_ALL",
+					"val": 100,
+                },
+                "amberCanCastSnipper" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "paadWeakAirMark",
+					"val": 2,
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "SNIPPER_ACTIVE"
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "amberCanCastDestroyer" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "paadWeakFireMark",
+					"val": 2,
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "DESTROYER_ACTIVE"
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "advancedMark" : {
+                    "type" : "ENCHANTMENT_ADVANCED_MARK"
+				}
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/enchantment/enchantmentExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/enchantment/enchantmentExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/enchantment/enchantmentExpBonus",
+				"large" : "phoenix-as-a-dream/skills/enchantment/enchantmentExpLarge"
+			},
+			"description" : "{Expert Enchantment}\n\nExpert Enchantment allows arcanomechanical devices to receive enchantments.\n\tSnipper: Adds a air implosion after each attack, dealing 50 + 20 × hero level damage.\n\tDestroyer: Shoots flame storm on attack (This attack does not benefit from effects that reduce enemy fire resistance).\n\tArrow Tower: Gain the same enchantments as the equipped arcanomechanical device.\n{Twinborn} – Amber's spell casts are doubled. Amber may use a bonus action before acting to place a mark on an enemy without affecting her attack or movement. The mark applied depends on the arcanomechanical device:\n\tSnipper: Applies Expert Weak Air Mark, reducing the target's air resistance by 100%\n\tDestroyer: Applies Expert Weak Fire Mark, reducing the target's fire resistance by 100%.",
+			"effects" : {
+				"snipperEnchantment" : {
+					"type" : "SPELL_AFTER_ATTACK",
+					"subtype" : "paadAirImplosion",
+					"val": 100,
+                    "addInfo": [3, 1],
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "snipperEnchantmentPower" : {
+					"type" : "SPECIFIC_SPELL_POWER",
+					"subtype" : "paadAirImplosion",
+					"val": 50,
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "snipperEnchantmentPowerUpdater" : {
+					"type" : "SPECIFIC_SPELL_POWER",
+					"subtype" : "paadAirImplosion",
+					"val": 20,
+                    "updater" : {
+                        "type" : "TIMES_HERO_LEVEL",
+                        "stepSize" : 1
+                    },
+                    "limiters": [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadSnipper",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "SNIPPER_ACTIVE"
+                                },
+                                [
+                                    "noneOf",
+                                    {
+                                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                        "bonusType" : "DESTROYER_ACTIVE"
+                                    }
+                                ]
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "destroyerEnchantment" :{
+                    "type" : "SPELL_LIKE_ATTACK",
+                    "subtype" : "paadFlameStorm",
+                    "val" : 3,
+                    "limiters" : [
+                        "allOf",
+                        [
+                            "anyOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "paadDestroyer",
+                                "includeUpgrades" : false
+                            },
+                            [
+                                "allOf",
+                                {
+                                    "type" : "CREATURE_TYPE_LIMITER",
+                                    "creature" : "arrowTower",
+                                    "includeUpgrades" : false
+                                },
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ],
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]   
+                },
+                "amberCasts" : {
+					"type" : "CASTS",
+					"valueType" : "PERCENT_TO_ALL",
+					"val": 100,
+                },
+                "amberCanCastSnipper" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "paadWeakAirMark",
+					"val": 3,
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "SNIPPER_ACTIVE"
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "amberCanCastDestroyer" : {
+					"type" : "SPELLCASTER",
+					"subtype" : "paadWeakFireMark",
+					"val": 3,
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "DESTROYER_ACTIVE"
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+                            }
+                        ]
+                    ]
+				},
+                "expertMark" : {
+                    "type" : "ENCHANTMENT_EXPERT_MARK"
+				}
+			}
+		}
+	}
+}
