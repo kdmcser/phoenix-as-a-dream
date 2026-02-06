@@ -1,0 +1,805 @@
+{
+	"paadArcanomechanicalAmulet":
+     {
+		"type" : [ "HERO" ],
+		"slot" : "NECK",
+		"class" : "RELIC",
+		"value" : 12000,
+		"bonuses" : 
+		{
+            "defence" : {
+                "type" : "PRIMARY_SKILL",
+                "subtype" : "defence",
+                "val" : 100000,
+                "valueType" : "INDEPENDENT_MAX",
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }
+                ]
+            },
+            "hitPoints" : {
+                "type" : "STACK_HEALTH",
+                "val" : 100000000,
+                "valueType" : "INDEPENDENT_MAX",
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }
+                ]
+            },
+            "physicalDamageImmunity" : {
+                "type" : "GENERAL_DAMAGE_REDUCTION",
+                "subtype" : "damageTypeAll",
+                "val" : 100,
+                "valueType" : "INDEPENDENT_MAX",
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }
+                ]
+            },
+            "spellDamageImmunity" : {
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+                "val" : 100,
+                "valueType" : "INDEPENDENT_MAX",
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }
+                ]
+            },  
+			"invincible" :
+			{
+				"type" : "INVINCIBLE",
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }
+                ]
+			},
+            "arcanomechanics" :
+			{
+				"type" : "ARCANOMECHANICS",
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }
+                ]
+			},
+            "activeMark" : {
+                "type" : "ARCANOMECHANICAL_AMULET_ACTIVE"
+            },
+            "snipperEnchantmentNone" : {
+                "type" : "SPELL_AFTER_ATTACK",
+                "subtype" : "lightningBolt",
+                "val": 100,
+                "addInfo": [1, 1],
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                        }
+                    ]
+                ]
+            },
+            "snipperEnchantmentPowerNone" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "lightningBolt",
+                "val": 20,
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                        }
+                    ]
+                ]
+            },
+            "snipperEnchantmentPowerUpdaterNone" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "lightningBolt",
+                "val": 10,
+                "updater" : {
+                    "type" : "TIMES_HERO_LEVEL",
+                    "stepSize" : 1
+                },
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                        }
+                    ]
+                ]
+            },
+            "destroyerEnchantmentNone" :{
+                "type" : "SPELL_LIKE_ATTACK",
+                "subtype" : "fireball",
+                "val" : 1,
+                "limiters" : [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadDestroyer",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            }
+                        ]
+                    ],
+                    [
+                        "noneOf",
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                        },
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                        }
+                    ]
+                ]   
+            },
+            "snipperEnchantmentBasic" : {
+                "type" : "SPELL_AFTER_ATTACK",
+                "subtype" : "titanBolt",
+                "val": 100,
+                "addInfo": [2, 1],
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                    }
+                ]
+            },
+            "snipperEnchantmentPowerBasic" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "titanBolt",
+                "val": 35,
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                    }
+                ]
+            },
+            "snipperEnchantmentPowerUpdaterBasic" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "lightningBolt",
+                "val": 15,
+                "updater" : {
+                    "type" : "TIMES_HERO_LEVEL",
+                    "stepSize" : 1
+                },
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                    }
+                ]
+            },
+            "destroyerEnchantmentBasic" :{
+                "type" : "SPELL_LIKE_ATTACK",
+                "subtype" : "inferno",
+                "val" : 2,
+                "limiters" : [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadDestroyer",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            }
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                    }
+                ]   
+            },
+            "snipperEnchantmentAdv" : {
+                "type" : "SPELL_AFTER_ATTACK",
+                "subtype" : "paadAirImplosion",
+                "val": 100,
+                "addInfo": [3, 1],
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                    }
+                ]
+            },
+            "snipperEnchantmentPowerAdv" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "paadAirImplosion",
+                "val": 50,
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                    }
+                ]
+            },
+            "snipperEnchantmentPowerUpdaterAdv" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "paadAirImplosion",
+                "val": 20,
+                "updater" : {
+                    "type" : "TIMES_HERO_LEVEL",
+                    "stepSize" : 1
+                },
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                    }
+                ]
+            },
+            "destroyerEnchantmentAdv" :{
+                "type" : "SPELL_LIKE_ATTACK",
+                "subtype" : "paadFlameStorm",
+                "val" : 3,
+                "limiters" : [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadDestroyer",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            }
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                    }
+                ]   
+            },
+            "snipperEnchantmentExp" : {
+                "type" : "SPELL_AFTER_ATTACK",
+                "subtype" : "paadChainLightningEx",
+                "val": 100,
+                "addInfo": [3, 1],
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                    }
+                ]
+            },
+            "snipperEnchantmentPowerExp" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "paadChainLightningEx",
+                "val": 65,
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                    }
+                ]
+            },
+            "snipperEnchantmentPowerUpdaterExp" : {
+                "type" : "SPECIFIC_SPELL_POWER",
+                "subtype" : "paadChainLightningEx",
+                "val": 25,
+                "updater" : {
+                    "type" : "TIMES_HERO_LEVEL",
+                    "stepSize" : 1
+                },
+                "limiters": [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadSnipper",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "SNIPPER_ACTIVE"
+                            },
+                            [
+                                "noneOf",
+                                {
+                                    "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                    "bonusType" : "DESTROYER_ACTIVE"
+                                }
+                            ]
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                    }
+                ]
+            },
+            "destroyerEnchantmentExp" :{
+                "type" : "SPELL_LIKE_ATTACK",
+                "subtype" : "paadArmageddonEx",
+                "val" : 3,
+                "limiters" : [
+                    "allOf",
+                    [
+                        "anyOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadDestroyer",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "allOf",
+                            {
+                                "type" : "CREATURE_TYPE_LIMITER",
+                                "creature" : "arrowTower",
+                                "includeUpgrades" : false
+                            },
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "DESTROYER_ACTIVE"
+                            }
+                        ]
+                    ],
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                    }
+                ]   
+            },
+             "amberCanCastBasic" : {
+                "type" : "SPELLCASTER",
+                "subtype" : "paadWeakSpellMark",
+                "val": 1,
+                "limiters" : [
+                    "allOf",
+                    {
+                        "type" : "CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander",
+                        "includeUpgrades" : false
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_BASIC_MARK"
+                    }
+                ]
+            },
+             "amberCanCastAdv" : {
+                "type" : "SPELLCASTER",
+                "subtype" : "paadWeakSpellMark",
+                "val": 2,
+                "limiters" : [
+                    "allOf",
+                    {
+                        "type" : "CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander",
+                        "includeUpgrades" : false
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_ADVANCED_MARK"
+                    }
+                ]
+            },
+             "amberCanCastExp" : {
+                "type" : "SPELLCASTER",
+                "subtype" : "paadWeakSpellMark",
+                "val": 3,
+                "limiters" : [
+                    "allOf",
+                    {
+                        "type" : "CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander",
+                        "includeUpgrades" : false
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ENCHANTMENT_EXPERT_MARK"
+                    }
+                ]
+            },
+		},
+		"graphics" : {
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/arcanomechanicalAmuletLarge",
+			"image" : "phoenix-as-a-dream/artifacts/arcanomechanicalAmuletMedium",
+			"map" : "phoenix-as-a-dream/map/artifacts/arcanomechanicalAmulet.def"
+		},
+		"text" : {
+			"name" : "Arcanomechanical Amulet",
+			"description" : "{Arcanomechanical Amulet}\r\n\r\nArcanomechanical Amulet causes all war machines to be treated as arcanomechanical devices, and they become invulnerable. If you have not learned Enchantment, your Snipper and Destroyer gain the most basic enchantment effects. If you have already learned it, their enchantment tier is enhanced.\r\nThe effects corresponding to each Enchantment level are as follows:\r\n\tNone: Snipper can adds a Lightning Bolt after each attack, dealing 20 + 10 × hero level damage.Destroyer can shoots Fireball on attack.\r\n\tBasic: Snipper can adds a Titan Bolt after each attack, dealing 35 + 15 × hero level damage. Destroyer can shoots Inferno on attack.\r\n\tAdvanced: Snipper can adds an Air Implosion after each attack, dealing 50 + 20 × hero level damage. Destroyer can shoots Flame Storm on attack.\r\n\tExpert: Snipper can adds a Chain Lightning Ex after each attack, dealing 65 + 25 × hero level damage. Destroyer can shoots Armageddon Ex on attack.\r\n{Twinborn} - When you have learned Enchantment, Amber can cast the corresponding level of Weak Spell Mark:\r\n\tBasic: Reduces the target’s all spell resistances by 50%.\r\n\t Advanced: Reduces the target’s all spell resistances by 75%. \r\n\tExpert: Reduces the target’s all spell resistances by 100%.",
+			"event" : "You find yourself playing rock-paper-scissors with a drunkard in the tavern, and luck smiles warmly upon you as you win his last three gold coins. Desperate, he pulls out an heirloom amulet—his final wager. Yet the Lady of Fortune still refuses to stand by his side. With a satisfied grin, you claim the amulet and tuck it safely into your pack."
+		}
+	}
+}
+
+

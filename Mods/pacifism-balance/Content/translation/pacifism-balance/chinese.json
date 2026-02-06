@@ -1,0 +1,6 @@
+{
+	"spell.courtyard.pacifism.description.advanced" : "{中级和平主义}\n\n选定部队无法攻击，并朝离他最近的部队移动，受到攻击后解除。",
+	"spell.courtyard.pacifism.description.basic" : "{初级和平主义}\n\n选定部队无法攻击，并朝离他最近的部队移动，受到攻击后解除。",
+	"spell.courtyard.pacifism.description.expert" : "{高级和平主义}\n\n选定部队无法攻击，并朝离他最近的部队移动，受到攻击后解除。",
+	"spell.courtyard.pacifism.description.none" : "{和平主义}\n\n选定部队无法攻击，并朝离他最近的部队移动，受到攻击后解除。"
+}

@@ -1,0 +1,42 @@
+{
+   "paadAirImplosion" : {
+		"type": "ability",
+		"targetType" : "CREATURE",
+		"name" : "Air Imlosion",
+		"school": {"air":true, "earth":false, "fire":false, "water":false},
+		"level": 5,
+		"power": 75,
+		"defaultGainChance": 0, 		
+		"gainChance":{},
+		"counters": {},		
+
+		"animation":{
+			"affect":["phoenix-as-a-dream/spells/airImplosion/airImplosion.def"]
+		},
+		"sounds": {
+			"cast": "DECAY"
+		},
+		"levels" : {
+			"base":{
+				"range" : "0",
+                "description": "",
+                "cost": 30,
+                "power": 100,
+				"battleEffects" : {
+					"directDamage" : {"type":"core:damage"}
+				},
+				"targetModifier":{"smart":true}
+			},
+			"none": {},
+			"basic": {"cost": 25},
+			"advanced": {"cost": 25, "power": 200},
+			"expert": {"cost": 25, "power": 300}
+		},
+		"flags" : {
+			"damage": true,
+			"negative": true
+		},
+		"targetCondition" : {
+		}
+	}
+}

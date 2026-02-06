@@ -16,8 +16,8 @@
 			 "max" : 16
 		},
 		"level" : 5,
-		"attack" : 14,
-		"defense" : 11,
+		"attack" : 13,
+		"defense" : 10,
 		"damage" :
 		{
 			 "min" : 12,
@@ -25,12 +25,12 @@
 		},
 		"growth" : 3,
 		"hitPoints" : 50,
-		"speed" : 10,
+		"speed" : 9,
 		"fightValue" : 582,
 		"aiValue" : 673,
 		"cost" :
 		{
-			"gold" : 600
+			"gold" : 650
 		},
 		"graphics" :
 		{
@@ -56,6 +56,11 @@
         },
 		"abilities" :
 		{ 
+			"canFly" : 
+			{	
+			    "type" : "FLYING",
+				"subtype": "movementTeleporting"
+			},
 			"nonLiving" : 
 			{
 				"type" : "NON_LIVING"
@@ -108,7 +113,11 @@
 				"type" : "HATE",
 				"subtype" : "creature.iceElemental",
 				"val" : 100
-			}		
+			},
+			"terrainNative" :
+			{
+				"type": "TERRAIN_NATIVE"
+			}	
 		},
 		"stackExperience" : 
 		[

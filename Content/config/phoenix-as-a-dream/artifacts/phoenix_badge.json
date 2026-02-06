@@ -6,31 +6,26 @@
 		"class" : "RELIC",
 		"value" : 8000,
 		"bonuses" : 
-		[
-			{
+		{
+			"rebirth" : {
 				"type" : "REBIRTH",
 				"val" : 20,
 				"valueType" : "ADDITIVE_VALUE"
 			},
-			{
-				"type" : "REBIRTH",
-				"val" : 100,
-				"valueType" : "INDEPENDENT_MIN"
-			},
-			{
+			"upgrade" :{
 				"type" : "SPECIAL_UPGRADE",
 				"subtype" : "creature.paadGoldenSunElement",
 				"addInfo" : "creature.firebird"
 			}
-		],
+		},
 		"graphics" : {
-			"large" : "phoenix-as-a-dream/artifacts/phoenixBadgeLarge",
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/phoenixBadgeLarge",
 			"image" : "phoenix-as-a-dream/artifacts/phoenixBadgeMedium",
 			"map" : "phoenix-as-a-dream/map/artifacts/phoenixBadge.def"
 		},
 		"text" : {
 			"name" : "Phoenix's Badge",
-			"description" : "{Phoenix's Badge}\r\n\r\nGive extra 20% rebirth ability (can not exceed 100%) to all the armies and allow hero to upgrage golden sun element to firebird.",
+			"description" : "{Phoenix's Badge}\r\n\r\nGive extra 20% rebirth ability to all the armies and allow hero to upgrage golden sun element to firebird.",
 			"event" : "You arrive in a scorching land and discover a warrior shooting arrows at the sun in the sky, having already shot down nine of them. Just as he is about to shoot the tenth sun, you stop him. You persuade him that if he shoots down the last sun, all things will be unable to grow. Heeding your advice, he considers for a moment, then gives up shooting and turns to leave. At sunset, the sun descends, and a golden crow finds you. You realize it is the incarnation of that last sun. It seems grateful to you and, after giving you a badge, departs. You can feel that this badge contains the secret of the golden crow's birth."
 		}
 	}

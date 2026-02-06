@@ -1,0 +1,22 @@
+{
+	"name" : "Phoenix As a Dream - New Map",
+	"description" : "Add new map \"Pestilence Lake(Henry Tao Single Hero)\".",
+	"author": "kdmcser",
+	"version" : "1.0.0",
+	"contact": "",
+	"modType" : "Compatibility",
+	"depends" : ["phoenix-as-a-dream.wog-support.commander"],
+	"compatibility" :
+	{
+		"min" : "1.5.0"
+	},	
+	"changelog" :
+	{
+		"1.0.0"   : [ "Initial release" ]
+	},
+
+	"chinese" : {
+		"name" : "凤凰如梦——新地图",
+		"description" : "添加新地图《归隐田园（紫玥炎霄单英雄版）》。"
+	}
+}

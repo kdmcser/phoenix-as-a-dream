@@ -1,15 +1,18 @@
 {
 	"paadPhoenixsBless" : {
 		"name" : "Phoenix's Bless",
+        "specialty" : [],
 		"gainChance" : {
 			"might" : 0,
 			"magic" : 0
 		},
+        "banInMapObjects" : true,
 		"basic" : {
 			"images" : {
-				"small" : "phoenix-as-a-dream/skills/baseSmall",
-				"medium" : "phoenix-as-a-dream/skills/baseMedium",
-				"large" : "phoenix-as-a-dream/skills/baseLarge"
+				"small" : "phoenix-as-a-dream/skills/phoenixBless/baseSmall",
+				"medium" : "phoenix-as-a-dream/skills/phoenixBless/baseMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/phoenixBless/baseBonus",
+				"large" : "phoenix-as-a-dream/skills/phoenixBless/baseLarge"
 			},
 			"description" : "{Basic Phoenix's Bless}\n\nBasic Phoenix's Bless gives 1 attack, 1 defence to all armies.",
 			"effects" : {
@@ -27,9 +30,10 @@
 		},
 		"advanced" : {
 			"images" : {
-				"small" : "phoenix-as-a-dream/skills/advSmall",
-				"medium" : "phoenix-as-a-dream/skills/advMedium",
-				"large" : "phoenix-as-a-dream/skills/advLarge"
+				"small" : "phoenix-as-a-dream/skills/phoenixBless/advSmall",
+				"medium" : "phoenix-as-a-dream/skills/phoenixBless/advMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/phoenixBless/advBonus",
+				"large" : "phoenix-as-a-dream/skills/phoenixBless/advLarge"
 			},
 			"description" : "{Advanced Phoenix's Bless}\n\nAdvanced Phoenix's Bless gives 1 attack, 1 defence, 1 morale and 1 luck to all armies.",
 			"effects" : {
@@ -55,9 +59,10 @@
 		},
 		"expert" : {
 			"images" : {
-				"small" : "phoenix-as-a-dream/skills/expSmall",
-				"medium" : "phoenix-as-a-dream/skills/expMedium",
-				"large" : "phoenix-as-a-dream/skills/expLarge"
+				"small" : "phoenix-as-a-dream/skills/phoenixBless/expSmall",
+				"medium" : "phoenix-as-a-dream/skills/phoenixBless/expMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/phoenixBless/expBonus",
+				"large" : "phoenix-as-a-dream/skills/phoenixBless/expLarge"
 			},
 			"description" : "{Expert Phoenix's Bless}\n\nExpert Phoenix's Bless gives 1 attack, 1 defence 1 morale, 1 luck, 1 health, 1 damage and 1 speed to all armies.",
 			"effects" : {

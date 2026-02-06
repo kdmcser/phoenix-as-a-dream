@@ -1,0 +1,200 @@
+{
+	"paadWindEvasion" : {
+		"name" : "Wind Evasion",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windEvasion/windEvasionBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windEvasion/windEvasionBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windEvasion/windEvasionBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windEvasion/windEvasionBasicLarge"
+			},
+			"description" : "{Basic Wind Evasion}\n\nBasic Wind Evasion grants allied creatures a 5% chance to evade melee and ranged physical damage, as well as any negative spells. Successful physical evasion will reduce the damage to 1.",
+			"effects" : {
+				"damageMiss": {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "paadWindDodge",
+					"val": 5,
+					"addInfo": [3,0],
+					"limiters" : [ "OPPOSITE_SIDE" ],
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER"
+				},
+ 				"spellMiss" : {
+					"type" : "MAGIC_RESISTANCE",
+					"val"  : 5
+				}   
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windEvasion/windEvasionAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windEvasion/windEvasionAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windEvasion/windEvasionAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windEvasion/windEvasionAdvLarge"
+			},
+			"description" : "{Advanced Wind Evasion}\n\nAdvanced Wind Evasion grants allied creatures a 10% chance to evade melee and ranged physical damage, as well as any negative spells. Successful physical evasion will reduce the damage to 1.",
+			"effects" : {
+				"damageMiss": {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "paadWindDodge",
+					"val": 10,
+					"addInfo": [3,0],
+					"limiters" : [ "OPPOSITE_SIDE" ],
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER"
+				},
+ 				"spellMiss" : {
+					"type" : "MAGIC_RESISTANCE",
+					"val"  : 10
+				}   
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windEvasion/windEvasionExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windEvasion/windEvasionExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windEvasion/windEvasionExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windEvasion/windEvasionExpLarge"
+			},
+			"description" : "{Expert Wind Evasion}\n\nExpert Wind Evasion grants allied creatures a 15% chance to evade melee and ranged physical damage, as well as any negative spells. Successful physical evasion will reduce the damage to 1. If hero learn 8 wind skills at expert level, these chances increase to 50%.",
+			"effects" : {
+				"damageMiss": {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "paadWindDodge",
+					"val": 15,
+					"addInfo": [3,0],
+					"limiters" : [ "OPPOSITE_SIDE" ],
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER"
+				},
+ 				"spellMiss" : {
+					"type" : "MAGIC_RESISTANCE",
+					"val"  : 15
+				},
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},	
+				"damageMissExtra" : {
+					"type": "SPELL_BEFORE_ATTACK",
+					"subtype": "paadWindDodge",
+					"val": 35,
+					"addInfo": [3,0],
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+				    "limiters" : [
+						"OPPOSITE_SIDE",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"spellMissExtra" : {
+					"type" : "MAGIC_RESISTANCE",
+					"val"  : 35,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}     
+			}
+		}
+	}
+}

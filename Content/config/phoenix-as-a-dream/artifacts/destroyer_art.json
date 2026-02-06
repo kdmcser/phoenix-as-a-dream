@@ -1,0 +1,185 @@
+{
+	"paadDestroyerArt":
+        {
+	    "type" : ["HERO"],
+	    "warMachine":"paadDestroyer",
+        "class": "SPECIAL",
+        "value": 5000,
+        "slot":"MACH1",
+        "text":
+		{
+			"name": "Destroyer",
+			"description": "{Destroyer}\r\n\r\nThe Destroyer is a devastating arcanomechanical construct capable of annihilating everything in its path. At the start of combat, it automatically sacrifices all friendly units except Amber. Neutral enemy creatures are divided into 6–7 stacks in combat.",
+        "event": "You arrive at a charred ancient battlefield, where shattered blackened bones and corroded fragments of armor carpet the land. The whispers of demons echo across the desolation. At the center of this forsaken place stands an arcanomechanical construct overflowing with brutal, destructive power. It takes great effort to calm the raging machine, but at last, you subdue it and bring it under your command."
+		},
+		"components": 
+		[
+			"paadSnipperArt"
+		],
+		"graphics":
+		{
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/destroyerLarge",
+			"image" : "phoenix-as-a-dream/artifacts/destroyerMedium",
+			"map" : "phoenix-as-a-dream/map/artifacts/destroyer.def"
+		},
+        "bonuses":
+        {
+            "killAllies": {
+                "subtype" : "paadSacrificeDestoryer",
+                "type" : "OPENING_BATTLE_SPELL",
+                "val" : 99
+			},
+            "removeAlliesMagicResistance": {
+                "type" : "MAGIC_RESISTANCE",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "removeAlliesResistanceAure": {
+                "type" : "SPELL_RESISTANCE_AURA",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "removeAlliesSpellDamageReduction": {
+                "type" : "SPELL_DAMAGE_REDUCTION",
+                "subtype": "any",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "removeAlliesAirSpellDamageReduction": {
+                "type" : "SPELL_DAMAGE_REDUCTION",
+                "subtype": "air",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "removeAlliesEarthSpellDamageReduction": {
+                "type" : "SPELL_DAMAGE_REDUCTION",
+                "subtype": "earth",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "removeAlliesFireSpellDamageReduction": {
+                "type" : "SPELL_DAMAGE_REDUCTION",
+                "subtype": "fire",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "removeAlliesWaterSpellDamageReduction": {
+                "type" : "SPELL_DAMAGE_REDUCTION",
+                "subtype": "water",
+                "val" : 0,
+                "valueType" : "INDEPENDENT_MIN",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "negateAllNaturalImunities": {
+                "type" : "NEGATE_ALL_NATURAL_IMMUNITIES",
+                "subtype" : "immunityEnemyHero",
+                "val" : 0,
+                "valueType" : "BASE_NUMBER",
+                "limiters" : [
+                    "noneOf",
+                    {
+                        "type":"HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "SIEGE_WEAPON"
+                    }, 
+                    {
+                        "type":"CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander", 
+                        "includeUpgrades" : false 
+                    }
+                ]
+            },
+            "forceNeutralEncounterStackCount": {
+                "type": "FORCE_NEUTRAL_ENCOUNTER_STACK_COUNT",
+                "addInfo" : [0, 0, 0, 0, 0, 20, 80],
+            },
+            "destroyerActive": {
+                "type": "DESTROYER_ACTIVE"
+            }
+        }
+	}
+}
+
+

@@ -1,0 +1,104 @@
+{
+	"paadSleepingDragonCommander":
+	{
+		"name" :
+		{
+			"plural" : "Sleeping Dragons",
+			"singular" : "Sleeping Dragon"
+		},
+		"description": "Sleeping Dragon was the spirit pet of Like Zheng in his younger years, and it followed its master to the new world. Although its magical abilities were at their peak in the low-magic world, on the continent of Antagarich, it was just a seemingly ordinary dragon. However, anyone who underestimated it would suffer greatly. The synergy between it and its master in battle was flawless, not to mention that both it and its master possessed powerful abilities that did not exist on the planet Colony.",
+		"advMapAmount" :
+		{
+			"max" : 25,
+			"min" : 16
+		},
+		"faction" : "dungeon",
+		"special" : true,
+		"hasDoubleWeek": false,
+		"doubleWide" : false,
+		"aiValue" : 156,
+		"attack" :5,
+		"cost" :
+		{
+			"gold" : 140
+		},
+		"damage" :
+		{
+			"max" : 12,
+			"min" : 6
+		},
+		"defense" : 5,
+		"fightValue" : 130,
+		"graphics" :
+		{
+			"animation" : "phoenix-as-a-dream/battle/creatures/sleeping_dragon.def",
+			"map" : "phoenix-as-a-dream/map/creatures/sleeping_dragon.def",
+			"iconSmall" : "phoenix-as-a-dream/iconsSmall/creatures/sleeping_dragon.bmp",
+			"iconLarge" : "phoenix-as-a-dream/iconsBig/creatures/sleeping_dragon.png",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 1.25,
+				"attack" : 1,
+				"idle" : 10
+			}
+        },
+		"growth" : 9,
+		"hitPoints" : 40,
+		"level" : 0,
+		"shots" : 24,
+		"sound" :
+		{
+			"attack": "FAERATTK.wav",
+			"defend": "FAERDFND.wav",
+			"killed": "FAERKILL.wav",
+			"move": "FAERMOVE.wav",
+			"wince": "FAERWNCE.wav"
+		},
+		"speed" : 4,
+		"abilities":
+		{
+			"reduceSpellDamage" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"val" : 10
+			},	
+			"reduceSpellDamageMax" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"valueType" : "INDEPENDENT_MIN",
+				"val" : 100
+			},
+			"alwaysFirst" : {
+				"type" : "ENCHANTED",
+				"subtype" : "spell.alwaysFirst"
+			},
+			"castsAmount" :
+			{
+				"type" : "CASTS",
+				"val" : 1
+			},
+			"enchantMin" :
+			{
+				"type" : "CREATURE_ENCHANT_POWER",
+				"val" : 1,
+				"valueType": "INDEPENDENT_MAX"
+			},
+			"enchantMax" :
+			{
+				"type" : "CREATURE_ENCHANT_POWER",
+				"val" : 1,
+				"valueType": "INDEPENDENT_MIN"
+			},
+			"fireVulnerable":
+			{
+				"type" : "ENCHANTER",
+				"subtype": "spell.paadFireVulnerable",
+				"val" : 3,
+				"addInfo" : 1
+			}
+		}
+	}
+}

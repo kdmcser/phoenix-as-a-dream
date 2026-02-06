@@ -1,0 +1,46 @@
+{
+    "courtyard:pacifism": 
+    {
+        "levels": 
+        {
+            "base": 
+            {
+                "effects": 
+                {
+                    "noRetaliation": 
+                    {
+                        "duration": ["UNTIL_BEING_ATTACKED", "N_TURNS"]
+                    },
+                    "noAttacks": 
+                    {
+                        "duration": ["UNTIL_BEING_ATTACKED", "N_TURNS"]
+                    },
+                    "noShooting": 
+                    {
+                        "duration": ["UNTIL_BEING_ATTACKED", "N_TURNS"]
+                    },
+                    "cowardice": 
+                    {
+                        "duration": ["UNTIL_BEING_ATTACKED", "N_TURNS"]
+                    }
+                }
+            },
+			"none":
+			{
+				"description": "{Pacifism}\n\nUnit becomes unable to attack and moves in the direction of other closest unit until being attacked."
+			},
+			"basic":
+			{ 
+				"description": "{Basic Pacifism}\n\nUnit becomes unable to attack and moves in the direction of other closest unit until being attacked."
+			},
+			"advanced":
+			{
+				"description": "{Advanced Pacifism}\n\nUnits become unable to attack and moves in the direction of other closest unit until being attacked.",
+			},
+			"expert":
+			{
+				"description": "{Expert Pacifism}\n\nUnits become unable to attack and moves in the direction of other closest unit until being attacked.",
+			}
+        }
+    }
+}

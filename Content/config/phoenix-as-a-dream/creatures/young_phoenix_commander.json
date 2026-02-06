@@ -1,0 +1,130 @@
+{
+	"paadYoungPhoenixCommander":
+	{
+		"name" :
+		{
+			"plural" : "Young Phoenixs",
+			"singular" : "Young Phoenix"
+		},
+		"description": "Young Phoenix is a golden sun element from Bracada. It was fortunate enough to be blessed with the Phoenix's Badge, giving it the chance to transform into a Firebird. However, it was also unfortunate to become the first golden sun element to fail this transformation. It felt the energy within it gathering and then rampaging inside, destroying its resistance to fire. Even worse, when it prepared for battle, this energy would uncontrollably release, annihilating everything around it. To resolve this issue, it came to Eeofol, where the fire energy was abundant. There, it met Henry Tao from another world and became a commander in his army.",
+		"hasDoubleWeek": false,
+		"doubleWide" : false,
+     	"faction" : "inferno",
+		"special" : true,
+		"advMapAmount" :
+		{
+			 "min" : 16,
+			 "max" : 25
+		},
+		"level" : 0,
+		"attack" : 5,
+		"defense" : 5,
+		"damage" :
+		{
+			 "min" : 6,
+			 "max" : 12
+		},
+		"growth" : 9,
+		"hitPoints" : 40,
+		"speed" : 4,
+		"fightValue" : 130,
+		"aiValue" : 156,
+		"shots" : 24,
+		"cost" :
+		{
+			"gold" : 140
+		},
+		"graphics" :
+		{
+			"animation" : "phoenix-as-a-dream/battle/creatures/golden_sun_element.def",
+			"map" : "phoenix-as-a-dream/map/creatures/golden_sun_element_map.def",
+			"iconSmall" : "phoenix-as-a-dream/iconsSmall/creatures/golden_sun_element_small.bmp",
+			"iconLarge" : "phoenix-as-a-dream/iconsBig/creatures/golden_sun_element_large.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 0.8,
+				"attack" : 1,
+				"idle" : 10
+			}
+		},
+		"sound" :
+		{
+			"attack": "ENERATTK.wav",
+			"defend": "ENERDFND.wav",
+			"killed": "ENERKILL.wav",
+			"move": "ENERMOVE.wav",
+			"wince": "ENERWNCE.wav"
+        },
+		"abilities" :
+		{ 
+			"avoidMagicResistance" :
+			{
+				"type" : "MAGIC_RESISTANCE",
+				"val" : 0,
+				"valueType": "INDEPENDENT_MIN"
+			},
+			"suicide" :
+			{
+				"type" : "MORE_DAMAGE_FROM_SPELL",
+				"subtype": "armageddon",
+				"val" : 100000
+			},	
+			"reduceSpellDamage" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"val" : 10
+			},	
+			"reduceSpellDamageMax" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"valueType" : "INDEPENDENT_MIN",
+				"val" : 100
+			},				
+			"canFly" : 
+			{	
+			    "type" : "FLYING",
+				"subtype": "movementTeleporting"
+			},
+			"nonLiving" : 
+			{
+				"type" : "NON_LIVING"
+			},
+			"immuneToMind" : 
+			{
+				"type" : "MIND_IMMUNITY"
+			},
+			"alwaysFirst" : {
+				"type" : "ENCHANTED",
+				"subtype" : "spell.alwaysFirst"
+			},
+			"armageddon":
+			{
+				"type" : "ENCHANTER",
+				"subtype": "armageddon",
+				"val" : 1,
+				"addInfo" : 1
+			},
+			"armageddonPower":
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val": -3000,
+				"valueType": "ADDITIVE_VALUE"
+			},
+			"armageddonPowerMin":
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val": 0,
+				"valueType": "INDEPENDENT_MAX"
+			},
+			"casts" :
+			{
+				"type" : "CASTS",
+				"val" : 999999,
+				"valueType" : "INDEPENDENT_MAX"
+			}
+		}
+	}
+}

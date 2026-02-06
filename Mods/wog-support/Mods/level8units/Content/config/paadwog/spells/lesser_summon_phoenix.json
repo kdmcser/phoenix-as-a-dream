@@ -7,7 +7,7 @@
 			{
 				"description": "{Expert Lesser Summon Phoenix}\r\n\r\nExpert Lesser Summon Phoenix allow hero to summon sacred phoenix during the battle, which does not remain after battle.",
 				"cost": 50,
-				"power": 125,
+				"power": 100,
 				"battleEffects":{
 					"summon":{
 						"id":"sacredPhoenix"

@@ -10,7 +10,7 @@
 			"biography" : "Phoenix As a Dream does not originate from the continent of Antagarich, and his origins are largely unknown to the outside world. After touring Antagarich, he decided to join Bracada to help maintain the continent's balance. He is not affiliated with any of Bracada's factions; instead, all factions hold him in high esteem. It is said that his power is great enough to sweep across the entire Bracada and even Antagarich. However, he has no interest in power and intentionally conceals most of his abilities. Nonetheless, if the artifacts he hid during his previous tours are returned to him, he is willing to unlock a portion of his power.",
 			"specialty" :
 			{
-				"description" : "{Flame creatures}\r\n\r\nUpgrade giants/titans to firebirds/phoenixes, and upgrade golems to relative fire elements. Flame creatures can also be upgraded without their buildings.",
+				"description" : "Upgrade giants/titans to firebirds/phoenixes, and upgrade golems to relative fire elements. Flame creatures can also be upgraded without their buildings.",
 				"tooltip" : "Special Upgrade: Flame creatures",
 				"name" : "Flame creatures"
 			}

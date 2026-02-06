@@ -1,0 +1,22 @@
+{  
+    "HINDRANCE_CRYSTAL_ACTIVE": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Hindrance Crystal}\nHindrance Crystal is active."
+    },
+    "HINDRANCE_BASIC_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Hindrance Basic Mark}\nLearned Basic Hindrance."
+    },
+    "HINDRANCE_ADVANCED_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Hindrance Advanced Mark}\nLearned Advanced Hindrance."
+    },
+    "HINDRANCE_EXPERT_MARK": {
+        "hidden" : true,
+        "creatureNature" : false,
+        "description" : "{Hindrance Expert Mark}\nLearned Expert Hindrance."
+    }
+}

@@ -1,0 +1,371 @@
+{
+	"paadWindShroud" : {
+		"name" : "Wind Shroud",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windShroud/windShroudBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windShroud/windShroudBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windShroud/windShroudBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windShroud/windShroudBasicLarge"
+			},
+			"description" : "{Basic Wind Shroud}\n\nBasic Wind Shroud grants the hero a cover of darkness with a radius of 5 on the adventure map and gain basic disguised effect. In combat, all allied armies begin in stealth for 1 turn, which ends upon attacking. While in stealth, damage is increased by 10%.",
+			"effects" : {
+				"darkness" : {
+					"type" : "DARKNESS",
+					"val"  : 5
+				},
+				"disguised" : {
+					"type" : "DISGUISED",
+					"val" : 1,
+					"valueType" : "INDEPENDENT_MAX"
+				},
+ 				"windStealth" : {
+					"type" : "OPENING_BATTLE_SPELL",
+					"subtype" : "paadWindStealth",
+					"val"  : 1,
+					"addInfo" : 1
+				}   
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windShroud/windShroudAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windShroud/windShroudAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windShroud/windShroudAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windShroud/windShroudAdvLarge"
+			},
+			"description" : "{Advanced Wind Shroud}\n\nAdvanced Wind Shroud grants the hero a cover of darkness with a radius of 10 on the adventure map and gain advanced disguised effect. In combat, all allied armies begin in stealth for 2 turn, which ends upon attacking. While in stealth, damage is increased by 20%.",
+			"effects" : {
+				"darkness" : {
+					"type" : "DARKNESS",
+					"val"  : 10
+				},
+				"disguised" : {
+					"type" : "DISGUISED",
+					"val" : 2,
+					"valueType" : "INDEPENDENT_MAX"
+				},
+ 				"windStealth" : {
+					"type" : "OPENING_BATTLE_SPELL",
+					"subtype" : "paadWindStealth",
+					"val"  : 2,
+					"addInfo" : 2
+				}   
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windShroud/windShroudExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windShroud/windShroudExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windShroud/windShroudExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windShroud/windShroudExpLarge"
+			},
+			"description" : "{Expert Wind Shroud}\n\nExpert Wind Shroud grants the hero a cover of darkness with a radius of 15 on the adventure map and gain expert disguised effect. In combat, all allied armies begin in stealth for 3 turn, which ends upon attacking. While in stealth, damage is increased by 30%. If hero learn 8 wind skills at expert level, the hero gain sight within the radius of cover of darkness and expert visions effect, also, the wind stealth spell can casted in combat without mana cost.",
+			"effects" : {
+				"darkness" : {
+					"type" : "DARKNESS",
+					"val"  : 15
+				},
+				"disguised" : {
+					"type" : "DISGUISED",
+					"val" : 3,
+					"valueType" : "INDEPENDENT_MAX"
+				},
+ 				"windStealth" : {
+					"type" : "OPENING_BATTLE_SPELL",
+					"subtype" : "paadWindStealth",
+					"val"  : 3,
+					"addInfo" : 3
+				},
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},	
+				"sightRadius" : {
+					"type": "SIGHT_RADIUS",
+					"val" : 15,
+					"valueType" : "INDEPENDENT_MAX",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"visionsMonsters" : {
+					"type" : "VISIONS",
+					"subtype" : "visionsMonsters",
+					"val" : 3,
+					"valueType" : "INDEPENDENT_MAX",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"visionsHeroes" : {
+					"type" : "VISIONS",
+					"subtype" : "visionsHeroes",
+					"val" : 3,
+					"valueType" : "INDEPENDENT_MAX",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"visionsTowns" : {
+					"type" : "VISIONS",
+					"subtype" : "visionsTowns",
+					"val" : 3,
+					"valueType" : "INDEPENDENT_MAX",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"castWindStealth" : {
+					"subtype" : "paadWindStealth",
+					"type" : "SPELL",
+					"val" : 3,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}    
+			}
+		}
+	}
+}

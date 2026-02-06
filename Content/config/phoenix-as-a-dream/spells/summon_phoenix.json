@@ -11,7 +11,7 @@
 			"water": false
 		},
 		"level": 5,
-		"power": 70,
+		"power": 50,
 		"defaultGainChance": 0,
 		"gainChance":
 		{
@@ -22,10 +22,10 @@
 		},
 		"graphics":
 		{
-			"iconBook": "phoenix-as-a-dream/spells/SommonPhoenixBook",
-			"iconScroll": "phoenix-as-a-dream/spells/SommonPhoenixScroll",
-			"iconScenarioBonus": "phoenix-as-a-dream/spells/SommonPhoenixScenarioBonus",
-			"iconEffect": "phoenix-as-a-dream/spells/SommonPhoenixEffect"
+			"iconBook": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixBook",
+			"iconScroll": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixScroll",
+			"iconScenarioBonus": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixScenarioBonus",
+			"iconEffect": "phoenix-as-a-dream/spells/sommonPhoenix/sommonPhoenixEffect"
 		},
 		"animation":
 		{
@@ -40,8 +40,7 @@
 			"base":
 			{
 				"description": "{Summon Phoenix}\r\n\r\nSummon phoenix allow hero to summon firebird during the battle, it will be kept in army after battle.",
-				"power": 75,
-				"aiValue": 10,
+				"power": 50,
 				"cost": 90,
 				"range": "X",
 				"targetModifier":{"smart":true},
@@ -68,7 +67,7 @@
 			{
 				"description": "{Advanced Summon Phoenix}\r\n\r\nAdvanced Summon Phoenix allow hero to summon phoenix during the battle, it will be kept in army after battle.",
 				"cost": 75,
-				"power": 100,
+				"power": 75,
 				"battleEffects":{
 					"summon":{
 						"id":"phoenix"
@@ -79,7 +78,7 @@
 			{
 				"description": "{Expert Summon Phoenix}\r\n\r\nExpert Summon Phoenix allow hero to summon phoenix during the battle, it will be kept in army after battle.",
 				"cost": 75,
-				"power": 125,
+				"power": 100,
 				"battleEffects":{
 					"summon":{
 						"id":"phoenix"

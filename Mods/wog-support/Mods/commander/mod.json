@@ -4,8 +4,8 @@
 	"author": "kdmcser",
 	"version" : "1.0.0",
 	"contact": "",
-	"modType" : "Expansion",
-	"depends" : ["wake-of-gods.commanders"],
+	"modType" : "Compatibility",
+	"depends" : ["wake-of-gods.commanders", "phoenix-as-a-dream"],
 	"compatibility" :
 	{
 		"min" : "1.5.0"
@@ -19,9 +19,21 @@
 		"name" : "凤凰如梦——wog指挥官支持",
 		"description" : "添加wog指挥官支持。"
 	},
-    
+	
+	"artifacts" :
+	[
+		"config/paadwog/artifacts/robe_of_salvation.json",
+	],	 
 	"heroClasses" :
 	[
 		"config/paadwog/classes/phoenix_class.json"
+	],
+	"heroes" :
+	[
+		"config/paadwog/heroes/ash_amber.json"
+	],
+	"objects" :
+	[
+		"config/paadwog/banks/sacred_trial_ground.json",
 	]
 }

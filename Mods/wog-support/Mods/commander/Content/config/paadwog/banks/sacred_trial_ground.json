@@ -1,0 +1,187 @@
+{
+	"core:creatureBank" : 
+	{
+		"types" : 
+		{
+			"paadSacredTrialGround" : 
+			{
+				"name" : "Sacred Trial Ground",
+				"templates" : {
+					"base" : { 
+						"animation" : "paadwog/map/banks/sacredTrialGround.def", 
+						"visitableFrom" : [ "---", "-+-", "+++" ], 
+						"mask" : ["VVVV", "VBAB"]
+					}
+				},
+				"rmg" : {
+					"value"		: 1000,
+					"zoneLimit" : 3,
+					"rarity"	: 100
+				},
+				"aiValue" : 1500,
+				"resetParameters" : {
+					"period" : 7,
+					"visitors" : true,
+					"rewards" : true
+				},
+				"onGuardedMessage" : "You step into a trial ground filled with a sacred aura, where a beautiful angel greets you. She asks: \"Do you wish to take part in the trial?\"",
+				"onVisitedMessage" : "You step into the trial ground, but the angel turns you away and saying: \"The Sacred Trial Ground is closed. Please come back next week.\"",
+				"visitMode" : "once",
+				"selectMode" : "selectFirst",
+				"guardsLayout" : "default",
+				"rewards": [
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 0, "max" : 10 },
+						"guards": [
+							{ "amount": 3, "type" : "angel" }
+						],
+						"resources": 
+						{
+							"gems" : 1,
+							"gold" : 3000
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 10, "max" : 20 },
+						"guards": [
+							{ "amount": 3, "type" : "greenDragon" }
+						],
+						"resources": 
+						{
+							"crystal" : 1,
+							"gold" : 2400
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 20, "max" : 30 },
+						"guards": [
+							{ "amount": 3, "type" : "giant" }
+						],
+						"resources": 
+						{
+							"gems" : 1,
+							"gold" : 2000
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 30, "max" : 40 },
+						"guards": [
+							{ "amount": 3, "type" : "devil" }
+						],
+						"resources": 
+						{
+							"mercury" : 1,
+							"gold" : 2700
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 40, "max" : 50 },
+						"guards": [
+							{ "amount": 3, "type" : "boneDragon" }
+						],
+						"resources": 
+						{
+						
+							"gold" : 1800
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 50, "max" : 60 },
+						"guards": [
+							{ "amount": 3, "type" : "redDragon" }
+						],
+						"resources": 
+						{	
+							"sulfur" : 1,
+							"gold" : 2500
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 60, "max" : 70 },
+						"guards": [
+							{ "amount": 3, "type" : "behemoth" }
+						],
+						"resources": 
+						{	
+							"gold" : 1500
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 70, "max" : 80 },
+						"guards": [
+							{ "amount": 3, "type" : "hydra" }
+						],
+						"resources": 
+						{	
+							"gold" : 2200
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 80, "max" : 90 },
+						"guards": [
+							{ "amount": 3, "type" : "firebird" }
+						],
+						"resources": 
+						{	
+							"gold" : 1500
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						]
+					},
+					{
+						"message" : 34,
+						"appearChance":  { "min" : 90, "max" : 100 },
+						"guards": [
+							{ "amount": 3, "type" : "paadGoldenSunElement" },
+							{ "amount": 3, "type" : "paadGoldenSunElement" }
+						],
+						"resources": 
+						{	
+							"gold" : 2000
+						},
+						"artifacts": [
+							"paadRobeOfSalvation"
+						],
+						"spells": [
+							"fireball"
+						]
+					}
+				]
+			}
+		}
+	}
+}

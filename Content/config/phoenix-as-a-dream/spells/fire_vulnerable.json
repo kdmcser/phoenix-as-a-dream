@@ -1,0 +1,81 @@
+{
+	"paadFireVulnerable" : {
+		"type" : "combat",
+		"name" : "Fire Vulnerable",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : true,
+			"water" : false
+		},
+		"targetType" : "CREATURE",
+		"level" : 1,
+		"power" : 10,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"animation" : {
+			"affect" :["phoenix-as-a-dream/spells/fireVulnerable/fireVulnerable.def"]
+		},
+		"flags" : {
+			"negative" : true,
+			"special" : true
+		},
+		"sounds" : {
+			"cast" : "FEAR"
+		},
+		"graphics" : {
+			"iconBook" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableBook.png",
+			"iconScroll" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableScroll.png",
+			"iconScenarioBonus" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableScenarioBonus.png",
+			"iconEffect" : "phoenix-as-a-dream/spells/fireVulnerable/fireVulnerableEffect.png"
+		},
+		"levels" : {
+			"base" : {
+				"range" : "0",
+				"power" : 10,
+				"targetModifier" : {
+					"smart" : true
+				},
+				"effects" : {
+					"fireVulnerable" : {
+						"val" : -50,
+						"type" : "SPELL_DAMAGE_REDUCTION",
+						"subtype": "fire",
+						"duration" : "N_TURNS"
+					}	
+				}
+			},
+			"none" :
+			{
+				"cost" : 6,
+				"description" : "{Fire Vulnerable}\r\n\r\nIncreasing the fire spell damage dealt to the target creature by 50%."
+			},
+			"basic" :
+			{
+				"cost" : 5,
+				"description" : "{Basic Fire Vulnerable}\r\n\r\nIncreasing the fire spell damage dealt to the target creature by 50%."
+			},
+			"advanced" :
+			{
+				"cost" : 5,
+				"effects" : {
+					"fireVulnerable" : {
+						"val" : -100
+					}
+				},
+				"description" : "{Advanced Fire Vulnerable}\r\n\r\nIncreasing the fire spell damage dealt to the target creature by 100%."
+			},
+			"expert" :
+			{
+				"cost" : 5,
+				"effects" : {
+					"fireVulnerable" : {
+						"val" : -100
+					}
+				},
+				"range" : "X",
+				"description" : "{Expert Fire Vulnerable}\r\n\r\nIncreasing the fire spell damage dealt to all enemies by 100%."
+			}
+		}
+	}
+}

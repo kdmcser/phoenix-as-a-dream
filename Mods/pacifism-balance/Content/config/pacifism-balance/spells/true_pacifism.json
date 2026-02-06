@@ -1,0 +1,139 @@
+
+{
+    "paadTruePacifism":
+    {
+        "type": "combat",
+        "targetType": "LOCATION",
+        "name": "True Pacifism",
+        "school":
+        {
+            "air": true,
+            "earth": false,
+            "fire": false,
+            "water": false
+        },
+        "level": 5,
+        "power": 90,
+
+        "defaultGainChance": 0,
+        "gainChance": {},
+
+        "animation":
+        {
+            "affect": ["courtyard/spells/Pacifism/Pacifism.def"]
+        },
+
+        "flags":
+        {
+            "negative": true,
+            "special": true
+        },
+        "targetCondition":
+        {
+            "noneOf":
+            {
+                "bonus.MIND_IMMUNITY": "normal",
+                "bonus.NON_LIVING": "normal",
+                "bonus.SIEGE_WEAPON": "absolute",
+                "bonus.UNDEAD": "normal"
+            }
+        },
+        "counters":
+        {
+            "spell.hypnotize": true,
+            "spell.berserk": true,
+            "courtyard:spell.pacifism": true
+        },
+        "graphics":
+        {
+            "iconBook": "courtyard/spells/Pacifism/Pacifism_book1",
+            "iconEffect": "courtyard/spells/Pacifism/Pacifism_effect1",
+            "iconScroll": "courtyard/spells/Pacifism/Pacifism_scroll1",
+            "iconScenarioBonus": "courtyard/spells/Pacifism/Pacifism_bonus1"
+        },
+
+        "sounds":
+        {
+            "cast": "courtyard/spells/SPELLPACIFY.wav"
+        },
+
+        "levels":
+        {
+            "base":
+            {
+                "cost": 60,
+                "range": "0",
+                "power": 10,
+                "targetModifier":
+                {
+                    "smart": false
+                },
+
+                "effects":
+                {
+                    "noRetaliation":
+                    {
+                        "type": "NO_RETALIATION",
+                        "duration": ["N_TURNS"]
+                    },
+                    "noAttacks":
+                    {
+                        "type": "ADDITIONAL_ATTACK",
+                        "val": -5,
+                        "duration": ["N_TURNS"]
+                    },
+                    "noShooting":
+                    {
+                        "type": "FORGETFULL",
+                        "val": 3,
+                        "duration": ["N_TURNS"]
+                    },
+                    "cowardice":
+                    {
+                        "type": "ATTACKS_NEAREST_CREATURE",
+                        "duration": ["N_TURNS"]
+                    }
+                }
+            },
+            "none":
+            {
+                "description": "{True Pacifism}\n\nUnit becomes unable to attack and moves in the direction of other closest unit."
+            },
+            "basic":
+            {
+                "cost": 50,
+                "description": "{Basic True Pacifism}\n\nUnit becomes unable to attack and moves in the direction of other closest unit."
+            },
+            "advanced":
+            {
+                "cost": 50,
+                "description": "{Advanced True Pacifism}\n\nUnits become unable to attack and moves in the direction of other closest unit.",
+                "range": "0-1"
+            },
+            "expert":
+            {
+                "cost": 50,
+                "description": "{Expert True Pacifism}\n\nUnits become unable to attack and moves in the direction of other closest unit.",
+                "range": "0-2"
+            }
+        }
+    },
+    "core:berserk":
+    {
+        "counters":
+        {
+            "spell.hypnotize": true,
+            "courtyard:spell.pacifism": true,
+            "phoenix-as-a-dream.pacifism-balance:spell.paadTruePacifism": true
+        }
+    },
+    "core:hypnotize":
+    {
+        "counters":
+        {
+            "spell.berserk": true,
+            "courtyard:spell.pacifism": true,
+            "phoenix-as-a-dream.pacifism-balance:spell.paadTruePacifism": true
+        }
+    }
+}

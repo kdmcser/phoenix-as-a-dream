@@ -1,0 +1,27 @@
+{
+	"name" : "Phoenix As a Dream - HotA Cove town support",
+	"description" : "Add HotA cove town support.",
+	"author": "kdmcser",
+	"version" : "1.0.0",
+	"contact": "",
+	"modType" : "Compatibility",
+	"depends" : ["hota.cove", "phoenix-as-a-dream"],
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},	
+	"changelog" :
+	{
+		"1.0.0"   : [ "Initial release" ]
+	},
+
+	"chinese" : {
+		"name" : "凤凰如梦——深渊号角港口支持",
+		"description" : "添加深渊号角港口支持。"
+	},
+	
+	"skills" :
+	[
+		"config/paadhota/skills/wind_sniping.json",
+	]
+}

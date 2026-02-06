@@ -1,0 +1,205 @@
+{
+	"paadSleepingDragon" :
+	{
+		"class": "paadArmageddonJudger",
+		"female" : false,
+		
+		"texts" :
+		{
+			"name" : "Like Zheng",
+			"biography" : "Like Zheng (Wolong) was once an excellent commander who took up the mantle alone after the king's disappearance, achieving remarkable military successes. He was also a mage, a rare profession in their low-magic world. Using his magical skills, he spent ten years tracking the king to another world and constructed a one-way teleportation array. After arranging state affairs, he resolutely stepped through the portal, knowing well he might never return. However, in the new world, he only found the previously missing general—Henry Tao. Upon learning from Henry that the king had tragically died in Erathia, he was furious but did not join Eeofol, as he disliked the fickle demons. Instead, he became a mage of Nighon. Due to the differences between the two worlds, he gained some extraordinary magical abilities but could not receive certain magical enhancements from Colony.",
+			"specialty" :
+			{
+				"description" : "Restoring all mana at the beginning of day and increasing magic damage by 5% per level. Increasing cast amount of commander 10% per level. Removing all magic resistance abilities and immune mana effects from all enemy armies . As a trade-off, starting with basic mysticism and basic learning skills, and can not gain spell power and knowledge when leveling up. ",
+				"tooltip" : "Special Bonus: Mysterious Prophet",
+				"name" : "Mysterious Prophet"
+			}
+		},
+
+		"images" :
+		{
+			"specialtySmall" : "phoenixasadream/heroes/sleepingdragon/spec-small.bmp",
+			"specialtyLarge" : "phoenixasadream/heroes/sleepingdragon/spec-large.bmp",
+			"large" : "phoenixasadream/heroes/sleepingdragon/portrait-large.png",
+			"small" : "phoenixasadream/heroes/sleepingdragon/portrait-small.png"
+		},
+		"army" :
+		[
+			{
+				"creature" : "troglodyte",
+				"max" : 40,
+				"min" : 30
+			},
+			{
+				"creature" : "harpy",
+				"max" : 6,
+				"min" : 4
+			},
+			{
+				"creature" : "beholder",
+				"max" : 4,
+				"min" : 3
+			}			
+		],
+		"skills" :
+		[
+			{
+				"level" : "basic",
+				"skill" : "paadMarching"
+			},
+			{
+				"level" : "basic",
+				"skill" : "paadFireResist"
+			},
+			{
+				"level" : "basic",
+				"skill" : "mysticism"
+			},
+			{
+				"level" : "basic",
+				"skill" : "learning"
+			}
+		],
+		"spellbook" :
+		[
+			"magicArrow",
+			"armageddon"
+		],
+		"specialty" : {
+			"bonuses" : {
+				"spellDamage": {
+					"type" : "SPELL_DAMAGE",
+					"subtype" : "any",
+					"updater" : "TIMES_HERO_LEVEL",
+					"val" : 5,
+					"valueType" : "ADDITIVE_VALUE"
+				},
+				"fullManaRegeneration": {
+                    "type" : "MANA_PERCENTAGE_REGENERATION",
+                    "val" : 100
+				},
+				"commanderCastsAmount" :
+				{
+					"type" : "CASTS",
+					"updater" : "TIMES_HERO_LEVEL",
+					"val" : 10,
+					"valueType": "PERCENT_TO_ALL",					
+					"limiters" : 
+					[
+						{
+							"type" : "CREATURE_TYPE_LIMITER",
+							"creature" : "paadSleepingDragonCommander", 
+							"includeUpgrades" : false
+						}
+					]
+				},
+             	"removeEnemyMagicImunities" :
+             	{
+                    "type" : "NEGATE_ALL_NATURAL_IMMUNITIES",
+                    "subtype" : "immunityBattleWide",
+                    "val" : 0,
+                    "valueType" : "BASE_NUMBER",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyMagicResistance" :
+             	{
+                    "type" : "MAGIC_RESISTANCE",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemySpellResistanceAura" :
+             	{
+                    "type" : "SPELL_RESISTANCE_AURA",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyAllSpellDamageReduction" :
+             	{
+                    "type" : "SPELL_DAMAGE_REDUCTION",
+                    "subtype" : "spellSchool.any",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyAirSpellDamageReduction" :
+             	{
+                    "type" : "SPELL_DAMAGE_REDUCTION",
+                    "subtype" : "spellSchool.air",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyEarthSpellDamageReduction" :
+             	{
+                    "type" : "SPELL_DAMAGE_REDUCTION",
+                    "subtype" : "spellSchool.earth",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyFireSpellDamageReduction" :
+             	{
+                    "type" : "SPELL_DAMAGE_REDUCTION",
+                    "subtype" : "spellSchool.fire",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyWaterSpellDamageReduction" :
+             	{
+                    "type" : "SPELL_DAMAGE_REDUCTION",
+                    "subtype" : "spellSchool.water",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyExtraSpellCost" :
+             	{
+                    "type" : "CHANGES_SPELL_COST_FOR_ENEMY",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyManaDrain" :
+             	{
+                    "type" : "MANA_DRAIN",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                },
+             	"removeEnemyManaChanneling" :
+             	{
+                    "type" : "MANA_CHANNELING",
+                    "val" : 0,
+                    "valueType" : "INDEPENDENT_MIN",
+                    "propagator": "BATTLE_WIDE",
+                    "propagationUpdater" : "BONUS_OWNER_UPDATER",
+                    "limiters" : [ "OPPOSITE_SIDE" ]
+                }
+			}
+		}
+	}
+}
+

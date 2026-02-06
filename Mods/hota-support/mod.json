@@ -1,0 +1,22 @@
+{
+	"name" : "Phoenix As a Dream - HotA support",
+	"description" : "Add HotA units support.",
+	"author": "kdmcser",
+	"version" : "1.0.0",
+	"contact": "",
+	"modType" : "Compatibility",
+	"depends" : ["hota"],
+	"compatibility" :
+	{
+		"min" : "1.7.0"
+	},	
+	"changelog" :
+	{
+		"1.0.0"   : [ "Initial release" ]
+	},
+
+	"chinese" : {
+		"name" : "凤凰如梦——HotA支持",
+		"description" : "添加HotA支持。"
+	}
+}

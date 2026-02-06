@@ -1,0 +1,97 @@
+{
+	"paadArcaneHindrance" : {
+		"type" : "combat",
+		"name" : "Arcane Hindrance",
+		"school" : {
+			"air" : false,
+			"earth" : false,
+			"fire" : false,
+			"water" : false,
+            "paadArcane": true
+		},
+		"targetType" : "LOCATION",
+		"level" : 0,
+		"power" : 10,
+		"defaultGainChance" : 0,
+		"gainChance" : {},
+		"animation" : {
+			"affect" :[
+                {
+                    "defName":"phoenix-as-a-dream/spells/arcaneHindrance/arcaneHindrance.def", 
+                    "verticalPosition":"bottom"
+                }
+            ]
+		},
+		"flags" : {
+			"negative" : true,
+			"special" : true
+		},
+		"sounds" : {
+			"cast" : "PARALYZE"
+		},
+		"graphics" : {
+			"iconBook" : "phoenix-as-a-dream/spells/arcaneHindrance/arcaneHindranceBook.png",
+			"iconScroll" : "phoenix-as-a-dream/spells/arcaneHindrance/arcaneHindranceScroll.png",
+			"iconScenarioBonus" : "phoenix-as-a-dream/spells/arcaneHindrance/arcaneHindranceScenarioBonus.png",
+			"iconEffect" : "phoenix-as-a-dream/spells/arcaneHindrance/arcaneHindranceEffect.png"
+		},
+		"levels" : {
+			"base" : {
+				"range" : "0",
+                "cost" : 0,
+				"power" : 10,
+				"targetModifier" : {
+					"smart" : true
+				},
+				"cumulativeEffects" : {
+					"reduceSpeed" : {
+						"val" : -1,
+						"type" : "STACKS_SPEED",
+                        "valueType" : "ADDITIVE_VALUE",
+						"duration" : "PERMANENT"
+					},
+					"minSpeed" : {
+						"val" : 3,
+						"type" : "STACKS_SPEED",
+                        "valueType" : "INDEPENDENT_MAX",
+						"duration" : "PERMANENT"
+					}                    
+				}
+			},
+			"none" :
+			{
+				"description" : "{Arcane Hindrance}\r\n\r\nArcane Hindrance reduces the target enemy creature's speed by 1 permanently during battle, its speed cannot be lower than 3."
+			},
+			"basic" :
+			{
+                "range" : "0-1",
+				"cumulativeEffects" : {
+					"minSpeed" : {
+						"val" : 2
+					}                    
+				},
+				"description" : "{Basic Arcane Hindrance}\r\n\r\nBasic Arcane Hindrance affects the target hex and all adjacent hexes, reduces the affected enemy creature's speed by 1 permanently during battle, its speed cannot be lower than 2."
+			},
+			"advanced" :
+			{
+                "range" : "0-2",
+				"cumulativeEffects" : {
+					"minSpeed" : {
+						"val" : 1
+					}                    
+				},
+				"description" : "{Advanced Arcane Hindrance}\r\n\r\nAdvanced Arcane Hindrance affects s the target hex and all hexes within 2 hexes of it, reduces the affected enemy creature's speed by 1 permanently during battle, its speed cannot be lower than 1."
+			},
+			"expert" :
+			{
+                "range" : "X",
+				"cumulativeEffects" : {
+					"minSpeed" : {
+						"val" : 1
+					}                    
+				},
+				"description" : "{Expert Arcane Hindrance}\r\n\r\nExpert Arcane Hindrance reduces all enemy creature's speed by 1 permanently during battle, its speed cannot be lower than 1."
+			}
+		}
+	}
+}

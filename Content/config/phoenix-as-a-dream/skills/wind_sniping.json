@@ -1,0 +1,212 @@
+{
+	"paadWindSniping" : {
+		"name" : "Wind Sniping",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSniping/windSnipingBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSniping/windSnipingBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSniping/windSnipingBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windSniping/windSnipingBasicLarge"
+			},
+			"description" : "{Basic Wind Sniping}\n\nBasic Wind Sniping allows the shooters in hero's army to have a (1% × creature level) chance to trigger an Accurate Shot when attacking.",
+			"effects" : {
+				"accurateShotFullRange" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareNoRangePenalty",
+					"val" : 1,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+				"accurateShotHalfRange" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareRangePenalty",
+					"val" : 1,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				}  
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSniping/windSnipingAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSniping/windSnipingAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSniping/windSnipingAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windSniping/windSnipingAdvLarge"
+			},
+			"description" : "{Advanced Wind Sniping}\n\nAdvanced Wind Sniping allows the shooters in hero's army to have a (2% × creature level when there is no range penalty and 1% × creature level  when the range penalty applies) chance to trigger an Accurate Shot when attacking.",
+			"effects" : {
+				"accurateShotFullRange" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareNoRangePenalty",
+					"val" : 2,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+				"accurateShotHalfRange" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareRangePenalty",
+					"val" : 1,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				}  
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windSniping/windSnipingExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windSniping/windSnipingExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windSniping/windSnipingExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windSniping/windSnipingExpLarge"
+			},
+			"description" : "{Expert Wind Sniping}\n\nExpert Wind Sniping allows the shooters in hero's army to have a (2% × creature level) chance to trigger an Accurate Shot when attacking. If hero learn 8 wind skills at expert level, these chances increase to 10% × creature level.",
+			"effects" : {
+				"accurateShotFullRange" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareNoRangePenalty",
+					"val" : 2,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				},
+				"accurateShotHalfRange" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareRangePenalty",
+					"val" : 2,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+					"limiters" : [ "SHOOTER_ONLY" ]
+				}  ,
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},	
+				"accurateShotFullRangeExtra" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareNoRangePenalty",
+					"val" : 8,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+				    "limiters" : [
+						"SHOOTER_ONLY",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"accurateShotHalfRangeExtra" : {
+					"type" : "DEATH_STARE",
+					"subtype" : "deathStareRangePenalty",
+					"val" : 8,
+					"addInfo" : "paadAccurateShot",
+					"updater" : "TIMES_STACK_LEVEL",
+				    "limiters" : [
+						"SHOOTER_ONLY",
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}     
+			}
+		}
+	}
+}

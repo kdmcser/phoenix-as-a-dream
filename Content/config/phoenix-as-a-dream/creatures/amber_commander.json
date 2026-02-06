@@ -1,0 +1,119 @@
+{
+	"paadAmberCommander":
+	{
+		"name" :
+		{
+			"plural" : "Amber",
+			"singular" : "Amber"
+		},
+    "description": "Amber and Ash have been inseparable since childhood, twin sisters bound as though they shared a single soul. Amber, having been born only a few seconds later, could only accept with mild regret the role of the younger sister. Not only do the two look alike, but their personalities, thoughts, and ways of dealing with the world are nearly indistinguishable. Some even suspect that they might, in truth, be one and the same—one the original, the other a manifested duplicate. Thus, they came to be known simply as \"Ash & Amber\".",
+		"hasDoubleWeek": false,
+		"doubleWide" : false,
+     	"faction" : "dungeon",
+		"special" : true,
+		"advMapAmount" :
+		{
+			 "min" : 16,
+			 "max" : 25
+		},
+		"level" : 0,
+		"attack" : 5,
+		"defense" : 5,
+		"damage" :
+		{
+			 "min" : 6,
+			 "max" : 12
+		},
+		"growth" : 9,
+		"hitPoints" : 40,
+		"speed" : 8,
+		"fightValue" : 130,
+		"aiValue" : 156,
+		"shots" : 24,
+		"cost" :
+		{
+			"gold" : 140
+		},
+		"graphics" :
+		{
+			"animation" : "phoenix-as-a-dream/battle/creatures/amber.def",
+			"map" : "phoenix-as-a-dream/map/creatures/amber_map.def",
+			"iconSmall" : "phoenix-as-a-dream/iconsSmall/creatures/amber_small.bmp",
+			"iconLarge" : "phoenix-as-a-dream/iconsBig/creatures/amber_large.bmp",
+			"timeBetweenFidgets" : 1,
+			"animationTime" :
+			{
+				"walk" : 0.8,
+				"attack" : 1,
+				"idle" : 10
+			},
+			"missile" :
+			{
+				"projectile": "PELFX.DEF",
+				"attackClimaxFrame" : 7,
+				"offset" :
+				{
+					"upperX" : 38,
+					"upperY" : -65,
+					"middleX" : 36,
+					"middleY" : -59,
+					"lowerX" : 21,
+					"lowerY" : -50
+				},
+				"frameAngles" : [90, 72, 45, 27, 0, -27, -45, -72, -90, 0, 0, 0]
+			}
+		},
+		"sound" :
+		{
+			"attack": "GELFSHOT.wav",
+			"defend": "GELFDFND.wav",
+			"killed": "SPRTKILL.wav",
+            "shoot" : "GELFSHOT.wav",
+			"move": "GELFMOVE.wav",
+			"wince": "SPRTWNCE.wav"
+        },
+		"abilities" :
+		{
+            "alwaysFirst" : 
+            {
+				"type" : "ENCHANTED",
+				"subtype" : "spell.alwaysFirst"
+			},
+			"shooter" :
+			{
+				"type" : "SHOOTER"
+			},
+			"noMelwwPenalty" :
+			{
+				"type" : "NO_MELEE_PENALTY"
+			},	                  
+			"reduceSpellDamage" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"val" : 10
+			},				
+			"magicResistance" :
+			{
+				"type" : "SPELL_DAMAGE_REDUCTION",
+				"subtype" : "spellSchool.any",
+				"val" : 5
+			},
+			"castsAmount" :
+			{
+				"type" : "CASTS",
+				"val" : 1
+			},
+			"enchant" :
+			{
+				"type" : "CREATURE_ENCHANT_POWER",
+				"val" : 1
+			},
+			"spellpower" :
+			{
+				"type" : "CREATURE_SPELL_POWER",
+				"val" : 100
+			}
+		}
+	}
+}

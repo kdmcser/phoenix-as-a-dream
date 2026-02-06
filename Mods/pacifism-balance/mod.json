@@ -1,0 +1,32 @@
+{  
+	"name" : "Pacifism Balance",
+	"description" : "Make pacifism more balence and add a new skill to learn True Pacifism for Like Zheng.",
+	"version" : "1.0.0",
+	"author" : "kdmcser",
+	"contact" : "https://www.h3wog.com/",
+	"modType": "Compatibility",
+	"depends": [
+		"courtyard"
+	],
+	"changelog" :
+    {
+		"1.0.0"   : [ "Initial release" ]
+    },
+	"chinese" : {
+		"name" : " 和平主义平衡",
+		"description" : "对和平主义法术进行平衡，为火舞龙霄添加一个学习真·和平主义的新技能。",
+		"translations" : [
+			"translation/pacifism-balance/chinese.json"
+		]
+	},
+	"heroClasses" : [ 
+        "config/pacifism-balance/classes/armageddon_judger.json"
+	],
+	"skills" : [ 
+        "config/pacifism-balance/skills/control_magic.json"
+	],
+	"spells" : [ 
+		"config/pacifism-balance/spells/pacifism.json",
+        "config/pacifism-balance/spells/true_pacifism.json"
+	]
+}

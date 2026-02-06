@@ -1,0 +1,95 @@
+{
+	"paadRingOfArmorBreak":
+     {
+		"type" : [ "HERO" ],
+		"slot" : "RING",
+		"class" : "MINOR",
+		"value" : 3000,
+		"bonuses" : 
+		{
+            "armorBreak" : {
+                "type" : "ENEMY_DEFENCE_REDUCTION",
+                "val": 20
+            },
+            "armorBreakArcanomechanics" : {
+                "type" : "ENEMY_DEFENCE_REDUCTION",
+                "val": 20,
+                "limiters" : [
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ARCANOMECHANICS"
+                    }
+                ]
+            },
+            "amberBeforeAttackBasic" : {
+                "type" : "SPELL_BEFORE_ATTACK",
+                "subtype" : "paadWeakRay",
+                "val": 100,
+                "addInfo": [1, 0],
+                "limiters": [
+                    "allOf",
+                    {
+                        "type" : "CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander",
+                        "includeUpgrades" : false
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ARMOR_BREAK_BASIC_MARK"
+                    }  
+                ]
+            },
+            "amberBeforeAttackAdv" : {
+                "type" : "SPELL_BEFORE_ATTACK",
+                "subtype" : "paadWeakRay",
+                "val": 100,
+                "addInfo": [2, 0],
+                "limiters": [
+                    "allOf",
+                    {
+                        "type" : "CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander",
+                        "includeUpgrades" : false
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ARMOR_BREAK_ADVANCED_MARK"
+                    }  
+                ]
+            },
+            "amberBeforeAttackExp" : {
+                "type" : "SPELL_BEFORE_ATTACK",
+                "subtype" : "paadWeakRay",
+                "val": 100,
+                "addInfo": [3, 0],
+                "limiters": [
+                    "allOf",
+                    {
+                        "type" : "CREATURE_TYPE_LIMITER",
+                        "creature" : "paadAmberCommander",
+                        "includeUpgrades" : false
+                    },
+                    {
+                        "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                        "bonusType" : "ARMOR_BREAK_EXPERT_MARK"
+                    }  
+                ]
+            },
+            "activeMark" : {
+                "type" : "RING_OF_ARMOR_BREAK_ACTIVE"
+            },
+		},
+		"graphics" : {
+			"scenarioBonus" : "phoenix-as-a-dream/artifacts/ringOfArmorBreakLarge",
+			"image" : "phoenix-as-a-dream/artifacts/ringOfArmorBreakMedium",
+			"map" : "phoenix-as-a-dream/map/artifacts/ringOfArmorBreak.def"
+		},
+		"text" : {
+			"name" : "Ring Of Armor Break",
+			"description" : "{Ring Of Armor Break}\r\n\r\nRing of Armor Break allows allied units to ignore 20% of the target’s defense when attacking. If the attacking unit is an arcanomechanical device, it ignores an additional 20% defense.\r\n{Twinborn} - Amber casts Weak Ray before attacking instead of Disrupting Ray, reducing the target’s attack by the same amount as its defense is reduced.",
+        "event" : "You rescued a monk who had been sweeping the ground when an earthquake struck. Deeply grateful, he presented you with a ring passed down through his family for generations. According to him, he once roamed the martial world relying on this very ring, never meeting an equal. Now advanced in years, he considers it a worldly possession no longer worth keeping, and offers it to you as repayment for saving his life. You gladly accept the gift and place it into your pack."
+		}
+	}
+}
+
+

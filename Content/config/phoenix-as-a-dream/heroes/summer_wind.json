@@ -1,0 +1,75 @@
+{
+	"paadSummerWind" :
+	{
+		"class": "paadWindHerald",
+		"female" : true,
+		
+		"texts" :
+		{
+			"name" : "Summer Wind",
+			"biography" : "Summer Wind was born and raised in AvLee, gifted with a natural affinity for the wind. From an early age, she wove this talent seamlessly into her archery, and before long her unmatched skill with the bow earned her renown across the land. Yet she was never content with mere fame. Resolutely leaving her homeland behind, she set out for Erathia. With her peerless accuracy, she quickly rose to prominence and became a general admired by all. But her true ambition went further—she sought to channel the power of the wind into her entire army, turning that invisible force into the key to mastering the battlefield.",
+			"specialty" :
+			{
+				"description" : "The morale of the shooter is maintained at a minimum of 1.",
+				"tooltip" : "Speical Bonus: Archer's Inspirationt",
+				"name" : "Archer's Inspiration"
+			}
+		},
+
+		"images" :
+		{
+			"specialtySmall" : "phoenixasadream/heroes/summerwind/spec-small.png",
+			"specialtyLarge" : "phoenixasadream/heroes/summerwind/spec-large.png",
+			"large" : "phoenixasadream/heroes/summerwind/portrait-large.png",
+			"small" : "phoenixasadream/heroes/summerwind/portrait-small.png"
+		},
+		"army" :
+		[
+			{
+				"creature" : "pikeman",
+				"max" : 20,
+				"min" : 10
+			},
+			{
+				"creature" : "archer",
+				"max" : 7,
+				"min" : 4
+			},
+			{
+				"creature" : "griffin",
+				"max" : 3,
+				"min" : 2
+			},			
+		],
+		"skills" :
+		[
+			{
+				"level" : "basic",
+				"skill" : "paadWindArchery"
+			},
+			{
+				"level" : "basic",
+				"skill" : "paadWindBless"
+			}
+		],
+		"spellbook" :
+		[
+			"slow"
+		],
+		
+		"specialty" : {
+			"bonuses" : {
+				"shootMoraleAlwaysPositive": {
+					"type" : "MORALE",
+					"val" : 1,
+					"valueType" : "INDEPENDENT_MAX",
+                    "limiters" : 
+					[
+						"SHOOTER_ONLY"
+					]
+				}
+			}
+		}
+	}
+}
+

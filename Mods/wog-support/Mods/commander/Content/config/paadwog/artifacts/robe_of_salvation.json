@@ -1,0 +1,27 @@
+{
+	"paadRobeOfSalvation":
+     {
+		"type" : [ "COMMANDER" ],
+		"class" : "TREASURE",
+		"value" : 1000,
+		"bonuses" : 
+		{
+			"immuneArmageddon" : {
+				"type" : "SPELL_IMMUNITY",
+				"subtype" : "spell.armageddon"
+			}
+		},
+		"graphics" : {
+			"scenarioBonus" : "paadwog/artifacts/robeOfSalvationLarge",
+			"image" : "paadwog/artifacts/robeOfSalvationMedium",
+			"map" : "paadwog/map/artifacts/robeOfSalvation.def"
+		},
+		"text" : {
+			"name" : "Robe Of Salvation",
+			"description" : "{Robe Of Salvation}\r\n\r\nRobe Of Salvation makes commander immunity to armageddon spell.",
+			"event" : "You step into a sacred trial ground, where an angel greets you and puts you through a small trial. After passing the trial, she deems you capable of protecting this world and gifts you a cloak. You quickly realize that this is the legendary Robe of Salvation."
+		}
+	}
+}
+
+

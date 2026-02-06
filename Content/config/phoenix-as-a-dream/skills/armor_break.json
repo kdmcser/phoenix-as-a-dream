@@ -1,0 +1,149 @@
+{
+	"paadArmorBreak" : {
+		"name" : "Armor Break",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/armorBreak/armorBreakBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/armorBreak/armorBreakBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/armorBreak/armorBreakBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/armorBreak/armorBreakBasicLarge"
+			},
+			"description" : "{Basic Armor Break}\n\nBasic Armor Break allows the arcanomechanical device to ignore 20% of the target enemy unit’s defense when attacking.\n{Twinborn} - Amber can cast Basic Disrupting Ray on the target before the attack, reducing its defense by 3.",
+			"effects" : {
+				"armorBreak" : {
+					"type" : "ENEMY_DEFENCE_REDUCTION",
+					"val": 20,
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+                "amberBeforeAttack":
+                {
+                    "type": "SPELL_BEFORE_ATTACK",
+                    "subtype": "disruptingRay",
+                    "val": 100,
+                    "addInfo": [1, 0],
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "RING_OF_ARMOR_BREAK_ACTIVE"
+                            }
+                        ]
+                    ]
+                },
+                "basicMark" : {
+                    "type" : "ARMOR_BREAK_BASIC_MARK"
+				}
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/armorBreak/armorBreakAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/armorBreak/armorBreakAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/armorBreak/armorBreakAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/armorBreak/armorBreakAdvLarge"
+			},
+			"description" : "{Advanced Armor Break}\n\nAdvanced Armor Break allows the arcanomechanical device to ignore 40% of the target enemy unit’s defense when attacking.\n{Twinborn} - Amber can cast Advanced Disrupting Ray on the target before the attack, reducing its defense by 4.",
+			"effects" : {
+				"armorBreak" : {
+					"type" : "ENEMY_DEFENCE_REDUCTION",
+					"val": 40,
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+                "amberBeforeAttack":
+                {
+                    "type": "SPELL_BEFORE_ATTACK",
+                    "subtype": "disruptingRay",
+                    "val": 100,
+                    "addInfo": [2, 0],
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "RING_OF_ARMOR_BREAK_ACTIVE"
+                            }
+                        ]
+                    ]
+                },
+                "advancedMark" : {
+                    "type" : "ARMOR_BREAK_ADVANCED_MARK"
+				}
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/armorBreak/armorBreakExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/armorBreak/armorBreakExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/armorBreak/armorBreakExpBonus",
+				"large" : "phoenix-as-a-dream/skills/armorBreak/armorBreakExpLarge"
+			},
+			"description" : "{Expert Armor Break}\n\nExpert Armor Break allows the arcanomechanical device to ignore 60% of the target enemy unit’s defense when attacking.\n{Twinborn} - Amber can cast Expert Disrupting Ray on the target before the attack, reducing its defense by 5.",
+			"effects" : {
+				"armorBreak" : {
+					"type" : "ENEMY_DEFENCE_REDUCTION",
+					"val": 60,
+                    "limiters" : [
+                        {
+                            "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                            "bonusType" : "ARCANOMECHANICS"
+                        }
+                    ]
+				},
+                "amberBeforeAttack":
+                {
+                    "type": "SPELL_BEFORE_ATTACK",
+                    "subtype": "disruptingRay",
+                    "val": 100,
+                    "addInfo": [3, 0],
+                    "limiters" : [
+                        "allOf",
+                        {
+                            "type" : "CREATURE_TYPE_LIMITER",
+                            "creature" : "paadAmberCommander",
+                            "includeUpgrades" : false
+                        },
+                        [
+                            "noneOf",
+                            {
+                                "type" : "HAS_ANOTHER_BONUS_LIMITER",
+                                "bonusType" : "RING_OF_ARMOR_BREAK_ACTIVE"
+                            }
+                        ]
+                    ]
+                },
+                "expertMark" : {
+                    "type" : "ARMOR_BREAK_EXPERT_MARK"
+				}
+			}
+		}
+	}
+}

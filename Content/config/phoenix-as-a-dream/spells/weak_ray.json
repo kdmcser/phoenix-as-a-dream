@@ -1,0 +1,95 @@
+{
+	"paadWeakRay" : 
+	{
+		"type": "ability",
+		"name": "Weak Ray",
+		"school":
+		{
+			"air": false,
+			"earth": false,
+			"fire": false,
+			"water": false
+		},	
+		"targetType": "CREATURE",
+		"level": 0,
+		"power": 1,
+		"defaultGainChance": 0, 
+		"gainChance":
+		{
+		},
+		"flags" : {
+			"negative": true
+		},
+		"animation":{
+			"affect":[{
+                "defName" : "phoenix-as-a-dream/spells/weakRay/weakRayAffect.def", 
+                "transparency" : 0.5
+            }],
+			"projectile":[{"defName":"phoenix-as-a-dream/spells/weakRay/weakRayProjectTile.def"}]
+		},
+		"graphics" : {
+			"iconBook" : "phoenix-as-a-dream/spells/weakRay/weakRayBook.png",
+			"iconScroll" : "phoenix-as-a-dream/spells/weakRay/weakRayScroll.png",
+			"iconScenarioBonus" : "phoenix-as-a-dream/spells/weakRay/weakRayScenarioBonus.png",
+			"iconEffect" : "phoenix-as-a-dream/spells/weakRay/weakRayEffect.png"
+		},
+		"sounds": {
+			"cast": "DISRUPTR"
+		},
+		"levels" : {
+			"base":{
+				"range" : "0",
+                "cost": 10,
+                "power": 1,
+				"targetModifier":{"smart":true},
+				"cumulativeEffects" : {
+                    "attack" : {
+						"type" : "PRIMARY_SKILL",
+						"subtype" : "primarySkill.attack",
+						"val" : -3,
+						"valueType" : "ADDITIVE_VALUE",
+						"duration" : "PERMANENT"
+					},
+					"defence" : {
+						"type" : "PRIMARY_SKILL",
+						"subtype" : "primarySkill.defence",
+						"val" : -3,
+						"valueType" : "ADDITIVE_VALUE",
+						"duration" : "PERMANENT"
+					}
+				}
+			},
+            "none": {
+                "description": "{Weak Ray}\r\n\r\nWeak Ray reduces the selected enemy unit's attack and defense strength by 3. A single enemy may be targeted multiple times by this spell."
+            },
+            "basic":{
+                "description": "{Basic Weak Ray}\r\n\r\nBasic Weak Ray reduces the selected enemy unit's attack and defense strength by 3. A single enemy may be targeted multiple times by this spell.",
+                "cost": 8
+			},
+			"advanced":{
+                "description": "{Advanced Weak Ray}\r\n\r\nAdvanced Weak Ray reduces the selected enemy unit's attack and defense strength by 4. A single enemy may be targeted multiple times by this spell.",
+                "cost": 8,
+				"cumulativeEffects" : {
+					"attack" : {
+						"val" : -4
+					},
+                    "defence" : {
+						"val" : -4
+					}
+				}
+			},
+			"expert":{
+                "description": "{Expert Weak Ray}\r\n\r\nExpert Weak Ray reduces the selected enemy unit's attack and defense strength by 5. A single enemy may be targeted multiple times by this spell.",
+                "cost": 8,
+				"cumulativeEffects" : {
+					"attack" : {
+						"val" : -5
+					},
+                    "defence" : {
+						"val" : -5
+					}
+				}
+			}
+		}
+	}
+}

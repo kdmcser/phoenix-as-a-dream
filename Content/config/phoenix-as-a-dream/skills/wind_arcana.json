@@ -1,0 +1,667 @@
+{
+	"paadWindArcana" : {
+		"name" : "Wind Arcana",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windArcana/windArcanaBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/windArcana/windArcanaBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windArcana/windArcanaBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/windArcana/windArcanaBasicLarge"
+			},
+			"description" : "{Basic Wind Arcana}\n\nBasic Wind Arcana allows hero to learn level 1–3 spells commonly used by archers and cast them at the basic level.",
+			"effects" : {
+				"bless" : {
+					"subtype" : "bless",
+					"type" : "SPELL",
+					"val" : 1
+				},     
+				"slow" : {
+					"subtype" : "slow",
+					"type" : "SPELL",
+					"val" : 1
+				},  	
+				"haste" : {
+					"subtype" : "haste",
+					"type" : "SPELL",
+					"val" : 1
+				},
+				"cure" : {
+					"subtype" : "cure",
+					"type" : "SPELL",
+					"val" : 1
+				}, 		
+				"dispel" : {
+					"subtype" : "dispel",
+					"type" : "SPELL",
+					"val" : 1
+				}, 		
+				"precision" : {
+					"subtype" : "precision",
+					"type" : "SPELL",
+					"val" : 1
+				}, 	
+				"blind" : {
+					"subtype" : "blind",
+					"type" : "SPELL",
+					"val" : 1
+				}, 		
+				"quicksand" : {
+					"subtype" : "quicksand",
+					"type" : "SPELL",
+					"val" : 1
+				},		
+				"antiMagic" : {
+					"subtype" : "antiMagic",
+					"type" : "SPELL",
+					"val" : 1
+				},	
+				"forgetfulness" : {
+					"subtype" : "forgetfulness",
+					"type" : "SPELL",
+					"val" : 1
+				},		
+				"airShield" : {
+					"subtype" : "airShield",
+					"type" : "SPELL",
+					"val" : 1
+				},	
+				"forceField" : {
+					"subtype" : "forceField",
+					"type" : "SPELL",
+					"val" : 1
+				},		
+				"teleport" : {
+					"subtype" : "teleport",
+					"type" : "SPELL",
+					"val" : 1
+				}				
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windArcana/windArcanaAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/windArcana/windArcanaAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windArcana/windArcanaAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/windArcana/windArcanaAdvLarge"
+			},
+			"description" : "{Advanced Wind Arcana}\n\nAdvanced Wind Arcana allows hero to learn level 1–4 spells commonly used by archers and cast them at the advanced level.",
+			"effects" : {
+				"bless" : {
+					"subtype" : "bless",
+					"type" : "SPELL",
+					"val" : 2
+				},     
+				"slow" : {
+					"subtype" : "slow",
+					"type" : "SPELL",
+					"val" : 2
+				},  	
+				"haste" : {
+					"subtype" : "haste",
+					"type" : "SPELL",
+					"val" : 2
+				},
+				"cure" : {
+					"subtype" : "cure",
+					"type" : "SPELL",
+					"val" : 2
+				}, 		
+				"dispel" : {
+					"subtype" : "dispel",
+					"type" : "SPELL",
+					"val" : 2
+				}, 		
+				"precision" : {
+					"subtype" : "precision",
+					"type" : "SPELL",
+					"val" : 2
+				}, 	
+				"blind" : {
+					"subtype" : "blind",
+					"type" : "SPELL",
+					"val" : 2
+				}, 		
+				"quicksand" : {
+					"subtype" : "quicksand",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"antiMagic" : {
+					"subtype" : "antiMagic",
+					"type" : "SPELL",
+					"val" : 2
+				},	
+				"forgetfulness" : {
+					"subtype" : "forgetfulness",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"airShield" : {
+					"subtype" : "airShield",
+					"type" : "SPELL",
+					"val" : 2
+				},	
+				"forceField" : {
+					"subtype" : "forceField",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"teleport" : {
+					"subtype" : "teleport",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"frenzy" : {
+					"subtype" : "frenzy",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"clone" : {
+					"subtype" : "clone",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"resurrection" : {
+					"subtype" : "resurrection",
+					"type" : "SPELL",
+					"val" : 2
+				},		
+				"prayer" : {
+					"subtype" : "prayer",
+					"type" : "SPELL",
+					"val" : 2
+				}				    
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/windArcana/windArcanaExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/windArcana/windArcanaExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/windArcana/windArcanaExpBonus",
+				"large" : "phoenix-as-a-dream/skills/windArcana/windArcanaExpLarge"
+			},
+			"description" : "{Expert Wind Arcana}\n\nExpert Wind Arcana allows hero to learn all spells commonly used by archers. If hero learn Expert Wind Swiftness, hero will gain access to the spells of fast movement on the Adventure Map. If hero learn 8 wind skills at expert level, hero will gain access to all spells. These spells can be casted at the expert level.",
+			"effects" : {
+				"bless" : {
+					"subtype" : "bless",
+					"type" : "SPELL",
+					"val" : 3
+				},     
+				"slow" : {
+					"subtype" : "slow",
+					"type" : "SPELL",
+					"val" : 3
+				},  	
+				"haste" : {
+					"subtype" : "haste",
+					"type" : "SPELL",
+					"val" : 3
+				},
+				"cure" : {
+					"subtype" : "cure",
+					"type" : "SPELL",
+					"val" : 3
+				}, 		
+				"dispel" : {
+					"subtype" : "dispel",
+					"type" : "SPELL",
+					"val" : 3
+				}, 		
+				"precision" : {
+					"subtype" : "precision",
+					"type" : "SPELL",
+					"val" : 3
+				}, 	
+				"blind" : {
+					"subtype" : "blind",
+					"type" : "SPELL",
+					"val" : 3
+				}, 		
+				"quicksand" : {
+					"subtype" : "quicksand",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"antiMagic" : {
+					"subtype" : "antiMagic",
+					"type" : "SPELL",
+					"val" : 3
+				},	
+				"forgetfulness" : {
+					"subtype" : "forgetfulness",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"airShield" : {
+					"subtype" : "airShield",
+					"type" : "SPELL",
+					"val" : 3
+				},	
+				"forceField" : {
+					"subtype" : "forceField",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"teleport" : {
+					"subtype" : "teleport",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"frenzy" : {
+					"subtype" : "frenzy",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"clone" : {
+					"subtype" : "clone",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"resurrection" : {
+					"subtype" : "resurrection",
+					"type" : "SPELL",
+					"val" : 3
+				},		
+				"prayer" : {
+					"subtype" : "prayer",
+					"type" : "SPELL",
+					"val" : 3
+				},
+				"airElemental" : {
+					"subtype" : "airElemental",
+					"type" : "SPELL",
+					"val" : 3
+				},	
+				"earthElemental" : {
+					"subtype" : "earthElemental",
+					"type" : "SPELL",
+					"val" : 3
+				},	
+				"fireElemental" : {
+					"subtype" : "fireElemental",
+					"type" : "SPELL",
+					"val" : 3
+				},	
+				"waterElemental" : {
+					"subtype" : "waterElemental",
+					"type" : "SPELL",
+					"val" : 3
+				},					
+				"expMark": {
+					"type" : "WANDERING_CREATURES_JOIN_BONUS",
+					"val": 0
+				},
+				"townPortal" : {
+					"subtype" : "townPortal",
+					"type" : "SPELL",
+					"val" : 3,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						}
+					]
+				},	
+				"dimensionDoor" : {
+					"subtype" : "dimensionDoor",
+					"type" : "SPELL",
+					"val" : 3,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						}
+					]
+				},	
+				"fly" : {
+					"subtype" : "fly",
+					"type" : "SPELL",
+					"val" : 3,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						}
+					]
+				},	
+				"level1Spell" : {
+					"subtype" : "spellLevel1",
+					"type" : "SPELLS_OF_LEVEL",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"level2Spell" : {
+					"subtype" : "spellLevel2",
+					"type" : "SPELLS_OF_LEVEL",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"level3Spell" : {
+					"subtype" : "spellLevel3",
+					"type" : "SPELLS_OF_LEVEL",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"level4Spell" : {
+					"subtype" : "spellLevel4",
+					"type" : "SPELLS_OF_LEVEL",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},	
+				"level5Spell" : {
+					"subtype" : "spellLevel5",
+					"type" : "SPELLS_OF_LEVEL",
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				},
+				"spellSkill" : {
+					"subtype" : "any",
+					"type" : "MAGIC_SCHOOL_SKILL",
+					"val" : 3,
+				    "limiters" : [
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArchery"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindBless"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindArcana"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSupply"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindShroud"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindEvasion"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSwiftness"
+						},
+						{
+							"type" : "HAS_ANOTHER_BONUS_LIMITER",
+							"bonusType": "WANDERING_CREATURES_JOIN_BONUS",
+							"bonusSourceType" : "SECONDARY_SKILL", 
+							"bonusSourceID" : "paadWindSniping"
+						}						
+					]
+				}				
+			}
+		}
+	}
+}

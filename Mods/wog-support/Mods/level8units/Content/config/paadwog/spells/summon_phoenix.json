@@ -7,7 +7,7 @@
 			{
 				"description": "{Expert Summon Phoenix}\r\n\r\nExpert Summon Phoenix allow hero to summon sacred phoenix during the battle, it will be kept in army after battle.",
 				"cost": 75,
-				"power": 200,
+				"power": 100,
 				"battleEffects":{
 					"summon":{
 						"id":"sacredPhoenix"

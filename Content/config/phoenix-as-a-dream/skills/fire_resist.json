@@ -1,0 +1,59 @@
+{
+	"paadFireResist" : {
+		"name" : "Fire Resist",
+		"gainChance" : {
+			"might" : 0,
+			"magic" : 0
+		},
+        "banInMapObjects" : true,
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/fireResist/fireResistBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/fireResist/fireResistBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/fireResist/fireResistBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/fireResist/fireResistBasicLarge"
+			},
+			"description" : "{Basic Fire Resist}\n\nBasic Fire Resist reduces the fire spell damage inflicted against the hero's troops by 25%.",
+			"effects" : {
+				"fireSpellDamageReduction" : {
+					"type" : "SPELL_DAMAGE_REDUCTION",
+					"subtype" : "fire",
+					"val": 25
+				}
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/fireResist/fireResistAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/fireResist/fireResistAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/fireResist/fireResistAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/fireResist/fireResistAdvLarge"
+			},
+			"description" : "{Advanced Fire Resist}\n\nAdvanced Fire Resist reduces the fire spell damage inflicted against the hero's troops by 50%.",
+			"effects" : {
+				"fireSpellDamageReduction" : {
+					"type" : "SPELL_DAMAGE_REDUCTION",
+					"subtype" : "fire",
+					"val": 50
+				}
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/fireResist/fireResistExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/fireResist/fireResistExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/fireResist/fireResistExpBonus",
+				"large" : "phoenix-as-a-dream/skills/fireResist/fireResistExpLarge"
+			},
+			"description" : "{Expert Fire Resist}\n\nExpert Fire Resist reduces the fire spell damage inflicted against the hero's troops by 100%.",
+			"effects" : {
+				"fireSpellDamageReduction" : {
+					"type" : "SPELL_DAMAGE_REDUCTION",
+					"subtype" : "fire",
+					"val": 100
+				}
+			}
+		}
+	}
+}

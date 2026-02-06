@@ -1,0 +1,89 @@
+{
+	"paadMarching" : {
+		"name" : "Marching",
+		"gainChance" : {
+			"might" : 3,
+			"magic" : 3
+		},
+        "specialty" : [],
+		"basic" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/marching/marchingBasicSmall",
+				"medium" : "phoenix-as-a-dream/skills/marching/marchingBasicMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/marching/marchingBasicBonus",
+				"large" : "phoenix-as-a-dream/skills/marching/marchingBasicLarge"
+			},
+			"description" : "{Basic Marching}\n\nBasic Marching increases the speed of your armies by 2 on the adventure map (does not affect battles).",
+			"effects" : {
+				"adventureMapSpeed" : {
+					"type" : "STACKS_SPEED",
+					"val": 2
+				},
+				"battlepSpeed" : {
+					"type" : "STACKS_SPEED",
+					"val": -2,
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "noneOf","OPPOSITE_SIDE" ]
+				}                   
+			}
+		},
+		"advanced" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/marching/marchingAdvSmall",
+				"medium" : "phoenix-as-a-dream/skills/marching/marchingAdvMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/marching/marchingAdvBonus",
+				"large" : "phoenix-as-a-dream/skills/marching/marchingAdvLarge"
+			},
+			"description" : "{Advanced Marching}}\n\nAdvanced Marching increases the speed of your armies by 4 on the adventure map (does not affect battles), and and gives your armies +1 speed in battle when they're outside their native terrain.",
+			"effects" : {
+				"adventureMapSpeed" : {
+					"type" : "STACKS_SPEED",
+					"val": 4
+				},
+				"battlepSpeed" : {
+					"type" : "STACKS_SPEED",
+					"val": -4,
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "noneOf", "OPPOSITE_SIDE" ]
+				},
+				"battlepSpeedOtherTerrain" : {
+					"type" : "STACKS_SPEED",
+					"val": 1,
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "noneOf", "OPPOSITE_SIDE", "CREATURE_NATIVE_TERRAIN"]
+				}    
+			}
+		},
+		"expert" : {
+			"images" : {
+				"small" : "phoenix-as-a-dream/skills/marching/marchingExpSmall",
+				"medium" : "phoenix-as-a-dream/skills/marching/marchingExpMedium",
+				"scenarioBonus" : "phoenix-as-a-dream/skills/marching/marchingExpBonus",
+				"large" : "phoenix-as-a-dream/skills/marching/marchingExpLarge"
+			},
+			"description" : "{Expert Marching}\n\nExpert Marching increases the speed of your armies by 6 on the adventure map (does not affect battles), and your armies will treat all terrains as their native terrain during battle.",
+			"effects" : {
+				"adventureMapSpeed" : {
+					"type" : "STACKS_SPEED",
+					"val": 6
+				},
+				"battlepSpeed" : {
+					"type" : "STACKS_SPEED",
+					"val": -6,
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "noneOf", "OPPOSITE_SIDE" ]
+				},
+				"battlepSpeedOtherTerrain" : {
+					"type" : "TERRAIN_NATIVE",
+					"propagator": "BATTLE_WIDE",
+					"propagationUpdater" : "BONUS_OWNER_UPDATER",
+					"limiters" : [ "noneOf", "OPPOSITE_SIDE"]
+				}      
+			}
+		}
+	}
+}
