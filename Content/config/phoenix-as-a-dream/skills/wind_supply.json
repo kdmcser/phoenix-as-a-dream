@@ -75,7 +75,7 @@
 				"unlimitedShots" : {
 					"type": "SHOTS",
 					"val" : 999999,
-					"valueType" : "INDEPENDENT_MIN",
+					"valueType" : "INDEPENDENT_MAX",
 				    "limiters" : [
 						{
 							"type" : "HAS_ANOTHER_BONUS_LIMITER",
